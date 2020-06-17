@@ -1,0 +1,20 @@
+Wed,15 Apr 2020 09:28:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:28:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:39:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:39:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:39:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:39:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:50:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:50:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:56:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 3
+Wed,15 Apr 2020 09:56:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0

@@ -1,0 +1,708 @@
+Sun,26 Apr 2020 14:18:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_collect_buired_result Line:92
+=====> setting root partition read and write
+Sun,26 Apr 2020 14:18:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_collect_buired_result Line:100
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried_Repair.log &"
+Sun,26 Apr 2020 14:18:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:18:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:18:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:18:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Foreground_Start  function,total count is 2
+Sun,26 Apr 2020 14:18:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Foreground
+Sun,26 Apr 2020 14:18:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:305
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:19:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:19:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:19:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:19:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:19:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:19:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:19:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Foreground_End  function,total count is 2
+Sun,26 Apr 2020 14:19:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Foreground
+Sun,26 Apr 2020 14:19:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:323
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:19:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:19:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:19:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:19:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:19:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:19:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:19:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Home_Start  function,total count is 2
+Sun,26 Apr 2020 14:19:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Home
+Sun,26 Apr 2020 14:19:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:345
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:20:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:20:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:20:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:20:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:20:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:20:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:20:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Home_startResult  function,total count is 2
+Sun,26 Apr 2020 14:20:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Home_startResult
+Sun,26 Apr 2020 14:20:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:387
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:20:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:20:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:20:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:20:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:20:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:20:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:20:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Home_Result  function,total count is 2
+Sun,26 Apr 2020 14:20:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Home_Result
+Sun,26 Apr 2020 14:20:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:406
+=====> vehicles Repair has showed 
+Sun,26 Apr 2020 14:21:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:21:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:21:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:21:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:21:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Click  function,total count is 2
+Sun,26 Apr 2020 14:21:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check
+Sun,26 Apr 2020 14:21:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:426
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:21:32 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:22:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:22:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:22:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:22:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:22:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:22:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Start  function,total count is 2
+Sun,26 Apr 2020 14:22:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check
+Sun,26 Apr 2020 14:22:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Start Line:447
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:22:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:22:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:22:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:23:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_End  function,total count is 2
+Sun,26 Apr 2020 14:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check
+Sun,26 Apr 2020 14:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_End Line:469
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:23:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:23:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:23:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:23:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:23:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:23:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:23:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Result  function,total count is 2
+Sun,26 Apr 2020 14:23:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check_Result
+Sun,26 Apr 2020 14:23:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Result Line:491
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:24:08 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:24:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:24:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:24:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:24:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:24:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:24:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Report_Click  function,total count is 2
+Sun,26 Apr 2020 14:24:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check_Report
+Sun,26 Apr 2020 14:24:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Click Line:513
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:24:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:48:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_collect_buired_result Line:92
+=====> setting root partition read and write
+Sun,26 Apr 2020 14:49:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_collect_buired_result Line:100
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried_Repair.log &"
+Sun,26 Apr 2020 14:49:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:49:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:49:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:49:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Foreground_Start  function,total count is 2
+Sun,26 Apr 2020 14:49:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Foreground
+Sun,26 Apr 2020 14:49:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:305
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:49:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:49:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:49:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:49:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:49:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:49:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:49:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Foreground_End  function,total count is 2
+Sun,26 Apr 2020 14:49:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Foreground
+Sun,26 Apr 2020 14:49:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:323
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:50:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:50:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:50:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:50:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:50:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:50:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:50:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Home_Start  function,total count is 2
+Sun,26 Apr 2020 14:50:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Home
+Sun,26 Apr 2020 14:50:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:345
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:50:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:50:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:50:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:50:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:50:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:50:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:50:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Home_startResult  function,total count is 2
+Sun,26 Apr 2020 14:50:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Home_startResult
+Sun,26 Apr 2020 14:50:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:387
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:51:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:51:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:51:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:51:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:51:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:51:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:51:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Home_Result  function,total count is 2
+Sun,26 Apr 2020 14:51:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Home_Result
+Sun,26 Apr 2020 14:51:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:406
+=====> vehicles Repair has showed 
+Sun,26 Apr 2020 14:51:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:51:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:51:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:51:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:51:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:51:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:51:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Click  function,total count is 2
+Sun,26 Apr 2020 14:51:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check
+Sun,26 Apr 2020 14:51:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:426
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:52:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:52:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:52:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:52:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:52:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:52:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:52:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Start  function,total count is 2
+Sun,26 Apr 2020 14:52:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check
+Sun,26 Apr 2020 14:52:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Start Line:447
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:52:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:53:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:53:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:53:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:53:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:53:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:53:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_End  function,total count is 2
+Sun,26 Apr 2020 14:53:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check
+Sun,26 Apr 2020 14:53:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_End Line:469
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:53:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:54:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:54:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:54:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:54:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:54:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:54:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Result  function,total count is 2
+Sun,26 Apr 2020 14:54:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check_Result
+Sun,26 Apr 2020 14:54:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Result Line:491
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:54:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:54:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:54:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:54:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:55:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:55:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:55:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Report_Click  function,total count is 2
+Sun,26 Apr 2020 14:55:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check_Report
+Sun,26 Apr 2020 14:55:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Click Line:513
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:55:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:55:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:55:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:55:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:55:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:55:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Report_Start  function,total count is 2
+Sun,26 Apr 2020 14:55:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check_Report
+Sun,26 Apr 2020 14:55:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Start Line:535
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:55:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:56:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:56:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:56:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:56:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:56:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:56:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Report_Hide  function,total count is 2
+Sun,26 Apr 2020 14:56:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check_Report_Hide
+Sun,26 Apr 2020 14:56:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Hide Line:557
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:56:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:57:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:57:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:57:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:57:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:57:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:57:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Check_Report_End  function,total count is 2
+Sun,26 Apr 2020 14:57:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Check_Report
+Sun,26 Apr 2020 14:57:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_End Line:581
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:57:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:57:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:57:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:57:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:58:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:58:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:58:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test History  function,total count is 2
+Sun,26 Apr 2020 14:58:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:History
+Sun,26 Apr 2020 14:58:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History Line:604
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:58:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:58:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:58:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:58:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====> start Test
+Sun,26 Apr 2020 14:58:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:58:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:58:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Remind  function,total count is 2
+Sun,26 Apr 2020 14:58:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Remind
+Sun,26 Apr 2020 14:58:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind Line:625
+=====> System Activation has showed 
+Sun,26 Apr 2020 14:58:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:59:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:127
+=====> end Test
+Sun,26 Apr 2020 14:59:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:130
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:59:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:229
+=====> start Test
+Sun,26 Apr 2020 14:59:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:59:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:241
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:59:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test History_Start  function,total count is 2
+Sun,26 Apr 2020 14:59:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:History
+Sun,26 Apr 2020 14:59:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Start Line:650
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 14:59:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:59:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:244
+=====> end Test
+Sun,26 Apr 2020 14:59:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:247
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 14:59:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:229
+=====> start Test
+Sun,26 Apr 2020 14:59:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 14:59:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:241
+=====> delete tracker successfully
+Sun,26 Apr 2020 14:59:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test History_End  function,total count is 2
+Sun,26 Apr 2020 14:59:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:History
+Sun,26 Apr 2020 14:59:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_End Line:670
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:00:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:00:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:244
+=====> end Test
+Sun,26 Apr 2020 15:00:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:247
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:00:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:229
+=====> start Test
+Sun,26 Apr 2020 15:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:241
+=====> delete tracker successfully
+Sun,26 Apr 2020 15:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test History_Result  function,total count is 2
+Sun,26 Apr 2020 15:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:History_Result
+Sun,26 Apr 2020 15:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Result Line:692
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:00:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:01:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:244
+=====> end Test
+Sun,26 Apr 2020 15:01:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:247
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:01:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:276
+=====> start Test
+Sun,26 Apr 2020 15:01:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:01:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:288
+=====> delete tracker successfully
+Sun,26 Apr 2020 15:01:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Remind_Start  function,total count is 2
+Sun,26 Apr 2020 15:01:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Remind
+Sun,26 Apr 2020 15:01:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Start Line:717
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:01:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:01:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:291
+=====> end Test
+Sun,26 Apr 2020 15:01:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:294
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:01:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:276
+=====> start Test
+Sun,26 Apr 2020 15:01:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:01:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:288
+=====> delete tracker successfully
+Sun,26 Apr 2020 15:01:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Remind_End  function,total count is 2
+Sun,26 Apr 2020 15:01:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Remind
+Sun,26 Apr 2020 15:01:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_End Line:737
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:02:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:02:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:291
+=====> end Test
+Sun,26 Apr 2020 15:02:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:294
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:02:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:276
+=====> start Test
+Sun,26 Apr 2020 15:02:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:02:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:288
+=====> delete tracker successfully
+Sun,26 Apr 2020 15:02:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Remind_Result  function,total count is 2
+Sun,26 Apr 2020 15:02:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Remind_Result
+Sun,26 Apr 2020 15:02:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Result Line:760
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:02:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:03:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:291
+=====> end Test
+Sun,26 Apr 2020 15:03:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:294
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:03:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:325
+=====> start Test
+Sun,26 Apr 2020 15:03:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:03:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:337
+=====> delete tracker successfully
+Sun,26 Apr 2020 15:03:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Widget_maintain_Click  function,total count is 2
+Sun,26 Apr 2020 15:03:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Widget_maintain
+Sun,26 Apr 2020 15:03:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Click Line:787
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:03:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:340
+=====> end Test
+Sun,26 Apr 2020 15:03:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:343
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:03:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:325
+=====> start Test
+Sun,26 Apr 2020 15:03:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:03:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:337
+=====> delete tracker successfully
+Sun,26 Apr 2020 15:03:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Widget_maintain_Start  function,total count is 2
+Sun,26 Apr 2020 15:03:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Widget_maintain
+Sun,26 Apr 2020 15:03:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Start Line:801
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:04:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:340
+=====> end Test
+Sun,26 Apr 2020 15:04:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:343
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:04:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:325
+=====> start Test
+Sun,26 Apr 2020 15:04:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Sun,26 Apr 2020 15:04:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:337
+=====> delete tracker successfully
+Sun,26 Apr 2020 15:04:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====> start test Widget_maintain_End  function,total count is 2
+Sun,26 Apr 2020 15:04:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====> check if Action:Widget_maintain
+Sun,26 Apr 2020 15:04:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_End Line:827
+=====> Vehicles Repair has showed 
+Sun,26 Apr 2020 15:05:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:340
+=====> end Test
+Sun,26 Apr 2020 15:05:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:343
+=====> kill vehicles repair progress 
+Sun,26 Apr 2020 15:05:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_Kill_Buried_Progress Line:380
+=====> kill logcat collect log progress
+Sun,26 Apr 2020 17:05:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:06:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Foreground  event: Start times
+Sun,26 Apr 2020 17:06:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:06:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Foreground  event: End times
+Sun,26 Apr 2020 17:06:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:07:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Home  event: Start times
+Sun,26 Apr 2020 17:07:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:07:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Home_startResult  event: Click times
+Sun,26 Apr 2020 17:07:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:08:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Home_Result  event: Click times
+Sun,26 Apr 2020 17:08:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:08:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check  event: Click times
+Sun,26 Apr 2020 17:08:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:09:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check  event: Start times
+Sun,26 Apr 2020 17:09:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:09:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check  event: End times
+Sun,26 Apr 2020 17:09:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:10:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check_Result  event: Click times
+Sun,26 Apr 2020 17:10:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:10:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check_Report  event: Click times
+Sun,26 Apr 2020 17:10:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:11:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check_Report  event: Start times
+Sun,26 Apr 2020 17:11:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:11:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check_Report_Hide  event: Click times
+Sun,26 Apr 2020 17:11:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:12:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Check_Report  event: End times
+Sun,26 Apr 2020 17:12:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:12:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : History  event: Click times
+Sun,26 Apr 2020 17:12:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:13:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Home action : Remind  event: Click times
+Sun,26 Apr 2020 17:13:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:13:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : History action : History  event: Start times
+Sun,26 Apr 2020 17:13:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:14:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : History action : History  event: End times
+Sun,26 Apr 2020 17:14:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:14:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : History action : History_Result  event: Click times
+Sun,26 Apr 2020 17:14:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:15:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Remind action : Remind  event: Start times
+Sun,26 Apr 2020 17:15:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:15:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Remind action : Remind  event: End times
+Sun,26 Apr 2020 17:15:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:16:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Remind action : Remind_Result  event: Click times
+Sun,26 Apr 2020 17:16:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:16:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Widget_maintain action : Widget_maintain  event: Click times
+Sun,26 Apr 2020 17:16:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:17:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Widget_maintain action : Widget_maintain  event: Start times
+Sun,26 Apr 2020 17:17:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====> start collect hive data
+Sun,26 Apr 2020 17:17:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====> start collect pagename : Widget_maintain action : Widget_maintain  event: End times

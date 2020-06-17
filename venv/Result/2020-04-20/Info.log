@@ -1,0 +1,1704 @@
+Mon,20 Apr 2020 10:12:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:test_collect_buired_result Line:91
+=====> setting root partition read and write
+Mon,20 Apr 2020 10:12:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:test_collect_buired_result Line:99
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried_Settings.log &"
+Mon,20 Apr 2020 10:12:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:12:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:12:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:12:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:12:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:12:57 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:13:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test OpenApp  function,total count is 2
+Mon,20 Apr 2020 10:13:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Open_App
+Mon,20 Apr 2020 10:13:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenApp Line:702
+=====> Enter settings page 
+Mon,20 Apr 2020 10:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:15:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:15:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:15:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:15:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Foreground_Start  function,total count is 2
+Mon,20 Apr 2020 10:15:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Foreground
+Mon,20 Apr 2020 10:15:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Foreground_Start Line:721
+=====> Enter settings page 
+Mon,20 Apr 2020 10:16:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:16:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:16:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:16:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:16:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:16:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:17:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:17:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:17:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:17:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Foreground_End  function,total count is 2
+Mon,20 Apr 2020 10:17:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Foreground
+Mon,20 Apr 2020 10:17:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Foreground_End Line:740
+=====> Enter settings page 
+Mon,20 Apr 2020 10:19:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:19:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:19:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:19:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:19:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:19:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:19:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:19:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:19:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:19:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Back  function,total count is 2
+Mon,20 Apr 2020 10:19:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 10:19:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:753
+=====> Enter settings page 
+Mon,20 Apr 2020 10:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:21:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:21:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:21:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:21:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:21:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_Start  function,total count is 2
+Mon,20 Apr 2020 10:21:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 10:21:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:771
+=====> Enter settings page 
+Mon,20 Apr 2020 10:23:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:23:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:23:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:23:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:23:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:23:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:23:40 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:23:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:23:45 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:23:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_End  function,total count is 2
+Mon,20 Apr 2020 10:23:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 10:23:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:790
+=====> Enter settings page 
+Mon,20 Apr 2020 10:25:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:25:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:25:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:25:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:25:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:25:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:25:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:25:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:25:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:25:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Open_WIFI  function,total count is 2
+Mon,20 Apr 2020 10:25:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Open_WIFI
+Mon,20 Apr 2020 10:25:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Open_WIFI Line:808
+=====> settings click wifi shortcut 
+Mon,20 Apr 2020 10:27:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:27:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:27:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:27:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:27:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:27:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:27:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:27:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:28:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:28:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test OpenBluetooth  function,total count is 2
+Mon,20 Apr 2020 10:28:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:OpenBluetooth
+Mon,20 Apr 2020 10:28:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenBluetooth Line:821
+=====> settings click open blue tooth shortcut 
+Mon,20 Apr 2020 10:29:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:29:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:29:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:29:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:29:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:29:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:30:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:30:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:30:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:30:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test WirelessCharging  function,total count is 2
+Mon,20 Apr 2020 10:30:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:WirelessCharging
+Mon,20 Apr 2020 10:30:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:WirelessCharging Line:834
+=====> settings click wireless charging shortcut 
+Mon,20 Apr 2020 10:31:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:31:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:31:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:31:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:31:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:31:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:32:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:32:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:32:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:32:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PrivacyMode  function,total count is 2
+Mon,20 Apr 2020 10:32:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PrivacyMode
+Mon,20 Apr 2020 10:32:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PrivacyMode Line:848
+=====> settings click privacy mode shortcut 
+Mon,20 Apr 2020 10:34:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:34:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:34:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:34:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:34:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:34:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:34:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:34:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:34:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:34:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickUser  function,total count is 2
+Mon,20 Apr 2020 10:34:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickUser
+Mon,20 Apr 2020 10:34:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickUser Line:863
+=====> settings click user shortcut 
+Mon,20 Apr 2020 10:36:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:36:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:36:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:36:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:36:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:36:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:36:35 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:36:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:36:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:36:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickBluetooth  function,total count is 2
+Mon,20 Apr 2020 10:36:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickBluetooth
+Mon,20 Apr 2020 10:36:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickBluetooth Line:880
+=====> settings click blue tooth  
+Mon,20 Apr 2020 10:38:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:38:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:38:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:38:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:38:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:38:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:38:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:38:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:38:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:38:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickWIFI  function,total count is 2
+Mon,20 Apr 2020 10:38:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickWIFI
+Mon,20 Apr 2020 10:38:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickWIFI Line:896
+=====> settings click wifi ui
+Mon,20 Apr 2020 10:40:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:40:38 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:40:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:40:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:40:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:40:38 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:40:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:40:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:40:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:41:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickPrivacy  function,total count is 2
+Mon,20 Apr 2020 10:41:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickPrivacy
+Mon,20 Apr 2020 10:41:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickPrivacy Line:912
+=====> settings click privacy ui 
+Mon,20 Apr 2020 10:42:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:42:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:42:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:42:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:42:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:42:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:43:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:43:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:43:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:43:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickVoice  function,total count is 2
+Mon,20 Apr 2020 10:43:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickVoice
+Mon,20 Apr 2020 10:43:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVoice Line:928
+=====> settings click voice ui 
+Mon,20 Apr 2020 10:44:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:44:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:44:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:44:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:44:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:44:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:45:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:45:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:45:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:45:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickVolume  function,total count is 2
+Mon,20 Apr 2020 10:45:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickVolume
+Mon,20 Apr 2020 10:45:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVolume Line:944
+=====> settings click volume ui 
+Mon,20 Apr 2020 10:47:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:47:08 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:47:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:47:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:47:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:47:08 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:47:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:47:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:47:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:47:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickCurrency  function,total count is 2
+Mon,20 Apr 2020 10:47:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickCurrency
+Mon,20 Apr 2020 10:47:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickCurrency Line:960
+=====> settings click currency ui 
+Mon,20 Apr 2020 10:49:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:49:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:49:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:49:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Mon,20 Apr 2020 10:49:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Mon,20 Apr 2020 10:49:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:49:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:49:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:49:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickSystem  function,total count is 2
+Mon,20 Apr 2020 10:49:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickSystem
+Mon,20 Apr 2020 10:49:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickSystem Line:976
+=====> settings click system ui 
+Mon,20 Apr 2020 10:51:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:128
+=====> kill setting progress
+Mon,20 Apr 2020 10:51:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:51:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:131
+=====> end Test
+Mon,20 Apr 2020 10:51:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 10:51:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 10:51:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:51:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 10:51:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:51:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 10:53:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:53:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:53:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_Start  function,total count is 2
+Mon,20 Apr 2020 10:53:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 10:53:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1465
+=====> settings click wm privacy setting ui
+Mon,20 Apr 2020 10:55:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 10:55:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 10:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 10:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 10:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:55:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 10:55:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:55:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 10:57:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 10:57:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 10:57:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PrivacModeSwitch  function,total count is 2
+Mon,20 Apr 2020 10:57:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PrivacModeSwitch
+Mon,20 Apr 2020 10:57:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PrivacModeSwitch Line:1480
+=====> settings click privacy mode switch ui
+Mon,20 Apr 2020 10:59:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 10:59:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:59:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:59:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 10:59:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 10:59:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 10:59:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 10:59:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 10:59:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 10:59:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:01:08 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:01:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:01:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test MapSwitch  function,total count is 2
+Mon,20 Apr 2020 11:01:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:MapSwitch
+Mon,20 Apr 2020 11:01:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:MapSwitch Line:1493
+=====> settings click map switch ui
+Mon,20 Apr 2020 11:02:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:02:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:02:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:02:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:02:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:02:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:02:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:02:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:02:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:02:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:05:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:05:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:05:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test CallSwitch  function,total count is 2
+Mon,20 Apr 2020 11:05:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:CallSwitch
+Mon,20 Apr 2020 11:05:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CallSwitch Line:1514
+=====> settings click call switch ui
+Mon,20 Apr 2020 11:06:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:06:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:06:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:06:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:06:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:06:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:06:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:06:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:06:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:06:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:08:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:08:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:08:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test DVRSwitch  function,total count is 2
+Mon,20 Apr 2020 11:08:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:DVRSwitch
+Mon,20 Apr 2020 11:08:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:DVRSwitch Line:1533
+=====> settings click DVR switch ui
+Mon,20 Apr 2020 11:10:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:10:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:10:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:10:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:10:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:10:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:10:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:10:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:10:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:10:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:12:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:12:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:12:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test VideoSwitch  function,total count is 2
+Mon,20 Apr 2020 11:12:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:VideoSwitch
+Mon,20 Apr 2020 11:12:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VideoSwitch Line:1552
+=====> settings click video switch ui
+Mon,20 Apr 2020 11:14:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:14:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:14:40 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:14:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:14:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:14:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:14:40 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:14:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:14:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:14:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:16:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:16:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:16:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test WeChat  function,total count is 2
+Mon,20 Apr 2020 11:16:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:WeChat
+Mon,20 Apr 2020 11:16:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:WeChat Line:1571
+=====> settings click wechat switch ui
+Mon,20 Apr 2020 11:18:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:18:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:18:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:18:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:18:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:18:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:18:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:18:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:18:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:18:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:20:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:20:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:20:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test CarHomeSwitch  function,total count is 2
+Mon,20 Apr 2020 11:20:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:CarHomeSwitch
+Mon,20 Apr 2020 11:20:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CarHomeSwitch Line:1590
+=====> settings click car home switch ui
+Mon,20 Apr 2020 11:22:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:22:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:22:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:22:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:22:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:22:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:22:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:22:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:22:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:22:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:24:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:24:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:24:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test VehicleSettingSwitch  function,total count is 2
+Mon,20 Apr 2020 11:24:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:VehicleSettingSwitch
+Mon,20 Apr 2020 11:24:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VehicleSettingSwitch Line:1610
+=====> settings click car home switch ui
+Mon,20 Apr 2020 11:26:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:26:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:26:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:26:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:26:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:26:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:26:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:26:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:26:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:26:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:28:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:28:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:28:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test SetClick  function,total count is 2
+Mon,20 Apr 2020 11:28:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:SetClick
+Mon,20 Apr 2020 11:28:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:SetClick Line:1636
+=====> settings click system settings switch ui
+Mon,20 Apr 2020 11:30:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:30:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:30:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:30:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:30:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:30:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:30:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:30:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:30:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:30:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:32:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:32:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:32:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Back  function,total count is 2
+Mon,20 Apr 2020 11:32:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 11:32:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1661
+=====> settings click system settings switch ui
+Mon,20 Apr 2020 11:34:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:34:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:34:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:34:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:34:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:249
+=====> start Test
+Mon,20 Apr 2020 11:34:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:252
+=====> enter setting ui 
+Mon,20 Apr 2020 11:34:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:34:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:261
+=====> Enter settings ui
+Mon,20 Apr 2020 11:34:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:34:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:266
+=====> Enter privacy page
+Mon,20 Apr 2020 11:36:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:36:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:273
+=====> delete tracker successfully
+Mon,20 Apr 2020 11:36:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_End  function,total count is 2
+Mon,20 Apr 2020 11:36:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 11:36:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1676
+=====> settings click system settings switch ui
+Mon,20 Apr 2020 11:38:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:279
+=====> kill setting progress
+Mon,20 Apr 2020 11:38:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:38:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:38:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:284
+=====> end Test
+Mon,20 Apr 2020 11:38:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 11:38:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 11:38:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:38:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 11:38:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:38:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 11:40:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:40:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 11:40:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_Start  function,total count is 2
+Mon,20 Apr 2020 11:40:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 11:40:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:997
+=====> settings enter blue tooth ui or exit blue tooth ui 
+Mon,20 Apr 2020 11:42:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 11:42:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:42:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:42:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 11:42:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 11:42:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 11:42:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:42:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 11:42:17 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:42:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 11:44:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:44:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 11:44:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test OpenBluetoothSwitch  function,total count is 2
+Mon,20 Apr 2020 11:44:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:OpenBluetoothSwitch
+Mon,20 Apr 2020 11:44:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenBluetoothSwitch Line:1014
+=====> settings click openbluetoothswitch 
+Mon,20 Apr 2020 11:46:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 11:46:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:46:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:46:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 11:46:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 11:46:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 11:46:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:46:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 11:46:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:46:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 11:48:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:48:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 11:48:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test VehicleName  function,total count is 2
+Mon,20 Apr 2020 11:48:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:VehicleName
+Mon,20 Apr 2020 11:48:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VehicleName Line:1029
+=====> settings click vehicle name ui 
+Mon,20 Apr 2020 11:49:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 11:49:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:49:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:49:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 11:49:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 11:49:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 11:49:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:50:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 11:50:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:50:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 11:52:05 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:52:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 11:52:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ConnectBluetooth  function,total count is 2
+Mon,20 Apr 2020 11:52:08 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ConnectBluetooth
+Mon,20 Apr 2020 11:52:08 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConnectBluetooth Line:1043
+=====> settings click blue tooth ui 
+Mon,20 Apr 2020 11:53:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 11:53:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:53:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:53:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 11:53:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 11:53:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 11:53:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:53:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 11:53:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:53:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 11:56:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:56:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 11:56:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test BreakBluetooth  function,total count is 2
+Mon,20 Apr 2020 11:56:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:BreakBluetooth
+Mon,20 Apr 2020 11:56:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:BreakBluetooth Line:1065
+=====> settings click blue tooth ui 
+Mon,20 Apr 2020 11:57:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 11:57:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:57:45 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:57:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 11:57:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 11:57:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 11:57:45 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 11:57:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 11:57:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 11:57:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 11:59:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 11:59:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 11:59:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickdeleteBluetooth  function,total count is 2
+Mon,20 Apr 2020 11:59:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickdeleteBluetooth
+Mon,20 Apr 2020 11:59:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickdeleteBluetooth Line:1087
+=====> settings click blue tooth ui 
+Mon,20 Apr 2020 12:01:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 12:01:32 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:01:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:01:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 12:01:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 12:01:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 12:01:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:01:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 12:01:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:01:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 12:03:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:03:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 12:03:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Back  function,total count is 2
+Mon,20 Apr 2020 12:03:38 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 12:03:38 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1116
+=====> settings click back ui 
+Mon,20 Apr 2020 12:05:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 12:05:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:05:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:05:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 12:05:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:366
+=====> start Test
+Mon,20 Apr 2020 12:05:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:369
+=====> enter setting ui 
+Mon,20 Apr 2020 12:05:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:05:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:378
+=====> Enter settings ui
+Mon,20 Apr 2020 12:05:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:05:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:383
+=====> Enter bluetooth page
+Mon,20 Apr 2020 12:07:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:07:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:389
+=====> deltet tracker successfully
+Mon,20 Apr 2020 12:07:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_End  function,total count is 2
+Mon,20 Apr 2020 12:07:32 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 12:07:32 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1128
+=====> settings click back ui 
+Mon,20 Apr 2020 12:09:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:395
+=====> kill setting progress
+Mon,20 Apr 2020 12:09:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:09:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:09:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:400
+=====> end Test
+Mon,20 Apr 2020 12:09:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:448
+=====> start Test
+Mon,20 Apr 2020 12:09:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:451
+=====> enter setting ui 
+Mon,20 Apr 2020 12:09:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:09:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:460
+=====> Enter settings ui
+Mon,20 Apr 2020 12:09:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:09:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:465
+=====> Enter bluetooth page
+Mon,20 Apr 2020 12:11:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:470
+=====> Enter blue dialog page
+Mon,20 Apr 2020 12:13:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:13:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:476
+=====> deltet tracker successfully
+Mon,20 Apr 2020 12:13:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_Start  function,total count is 2
+Mon,20 Apr 2020 12:13:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 12:13:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1147
+=====> settings click delete blue tooth dialog 
+Mon,20 Apr 2020 12:14:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:482
+=====> kill setting progress
+Mon,20 Apr 2020 12:14:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:14:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:14:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:487
+=====> end Test
+Mon,20 Apr 2020 12:14:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:448
+=====> start Test
+Mon,20 Apr 2020 12:14:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:451
+=====> enter setting ui 
+Mon,20 Apr 2020 12:14:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:460
+=====> Enter settings ui
+Mon,20 Apr 2020 12:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:14:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:465
+=====> Enter bluetooth page
+Mon,20 Apr 2020 12:16:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:470
+=====> Enter blue dialog page
+Mon,20 Apr 2020 12:18:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:18:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:476
+=====> deltet tracker successfully
+Mon,20 Apr 2020 12:18:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickCancel  function,total count is 2
+Mon,20 Apr 2020 12:18:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickCancel
+Mon,20 Apr 2020 12:18:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickCancel Line:1175
+=====> settings click cancle button ui 
+Mon,20 Apr 2020 12:20:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:482
+=====> kill setting progress
+Mon,20 Apr 2020 12:20:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:20:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:20:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:487
+=====> end Test
+Mon,20 Apr 2020 12:20:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:448
+=====> start Test
+Mon,20 Apr 2020 12:20:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:451
+=====> enter setting ui 
+Mon,20 Apr 2020 12:20:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:20:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:460
+=====> Enter settings ui
+Mon,20 Apr 2020 12:20:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:20:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:465
+=====> Enter bluetooth page
+Mon,20 Apr 2020 12:22:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:470
+=====> Enter blue dialog page
+Mon,20 Apr 2020 12:24:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:24:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:476
+=====> deltet tracker successfully
+Mon,20 Apr 2020 12:24:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_End  function,total count is 2
+Mon,20 Apr 2020 12:24:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 12:24:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1188
+=====> settings click page display end button ui 
+Mon,20 Apr 2020 12:26:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:482
+=====> kill setting progress
+Mon,20 Apr 2020 12:26:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:26:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:26:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:487
+=====> end Test
+Mon,20 Apr 2020 12:26:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:514
+=====> start Test
+Mon,20 Apr 2020 12:26:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:517
+=====> enter setting ui 
+Mon,20 Apr 2020 12:26:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:26:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:526
+=====> Enter settings ui
+Mon,20 Apr 2020 12:26:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:26:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:531
+=====> Enter wifi page
+Mon,20 Apr 2020 12:28:17 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:28:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:537
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:28:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_Start  function,total count is 2
+Mon,20 Apr 2020 12:28:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 12:28:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1210
+=====> settings click WiFi page display  button ui 
+Mon,20 Apr 2020 12:30:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:543
+=====> kill setting progress
+Mon,20 Apr 2020 12:30:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:30:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:30:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:548
+=====> end Test
+Mon,20 Apr 2020 12:30:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:514
+=====> start Test
+Mon,20 Apr 2020 12:30:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:517
+=====> enter setting ui 
+Mon,20 Apr 2020 12:30:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:30:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:526
+=====> Enter settings ui
+Mon,20 Apr 2020 12:30:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:30:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:531
+=====> Enter wifi page
+Mon,20 Apr 2020 12:32:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:32:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:537
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:32:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Back  function,total count is 2
+Mon,20 Apr 2020 12:32:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 12:32:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1224
+=====> settings click WiFi back button 
+Mon,20 Apr 2020 12:33:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:543
+=====> kill setting progress
+Mon,20 Apr 2020 12:33:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:33:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:33:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:548
+=====> end Test
+Mon,20 Apr 2020 12:33:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:514
+=====> start Test
+Mon,20 Apr 2020 12:33:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:517
+=====> enter setting ui 
+Mon,20 Apr 2020 12:33:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:33:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:526
+=====> Enter settings ui
+Mon,20 Apr 2020 12:33:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:33:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:531
+=====> Enter wifi page
+Mon,20 Apr 2020 12:36:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:36:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:537
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:36:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_End  function,total count is 2
+Mon,20 Apr 2020 12:36:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 12:36:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1236
+=====> settings click WiFi back button 
+Mon,20 Apr 2020 12:37:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:543
+=====> kill setting progress
+Mon,20 Apr 2020 12:37:45 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:37:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:37:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:548
+=====> end Test
+Mon,20 Apr 2020 12:37:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:514
+=====> start Test
+Mon,20 Apr 2020 12:37:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:517
+=====> enter setting ui 
+Mon,20 Apr 2020 12:37:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:37:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:526
+=====> Enter settings ui
+Mon,20 Apr 2020 12:37:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:37:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:531
+=====> Enter wifi page
+Mon,20 Apr 2020 12:39:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:39:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:537
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:39:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickIgnoreWIFI  function,total count is 2
+Mon,20 Apr 2020 12:39:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickIgnoreWIFI
+Mon,20 Apr 2020 12:39:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickIgnoreWIFI Line:1248
+=====> settings click WiFi ignore  button 
+Mon,20 Apr 2020 12:41:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:543
+=====> kill setting progress
+Mon,20 Apr 2020 12:41:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:41:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:41:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:548
+=====> end Test
+Mon,20 Apr 2020 12:41:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:514
+=====> start Test
+Mon,20 Apr 2020 12:41:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:517
+=====> enter setting ui 
+Mon,20 Apr 2020 12:41:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:41:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:526
+=====> Enter settings ui
+Mon,20 Apr 2020 12:41:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:41:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:531
+=====> Enter wifi page
+Mon,20 Apr 2020 12:43:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:43:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:537
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:43:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test OpenWIFISwitch  function,total count is 2
+Mon,20 Apr 2020 12:43:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:OpenWIFISwitch
+Mon,20 Apr 2020 12:43:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenWIFISwitch Line:1262
+=====> settings click Open WiFi Switch   button 
+Mon,20 Apr 2020 12:45:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:543
+=====> kill setting progress
+Mon,20 Apr 2020 12:45:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:45:38 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:45:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:548
+=====> end Test
+Mon,20 Apr 2020 12:45:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:514
+=====> start Test
+Mon,20 Apr 2020 12:45:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:517
+=====> enter setting ui 
+Mon,20 Apr 2020 12:45:38 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:45:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:526
+=====> Enter settings ui
+Mon,20 Apr 2020 12:45:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:45:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:531
+=====> Enter wifi page
+Mon,20 Apr 2020 12:47:45 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:47:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:537
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:47:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ConnectWIFI  function,total count is 2
+Mon,20 Apr 2020 12:47:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ConnectWIFI
+Mon,20 Apr 2020 12:47:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConnectWIFI Line:1275
+=====> settings click Connect WiFi  button 
+Mon,20 Apr 2020 12:49:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:543
+=====> kill setting progress
+Mon,20 Apr 2020 12:49:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:548
+=====> end Test
+Mon,20 Apr 2020 12:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:591
+=====> start Test
+Mon,20 Apr 2020 12:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:594
+=====> enter setting ui 
+Mon,20 Apr 2020 12:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:49:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:603
+=====> Enter settings ui
+Mon,20 Apr 2020 12:49:35 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:49:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:608
+=====> Enter wifi page
+Mon,20 Apr 2020 12:53:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:53:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:617
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:53:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_Start  function,total count is 2
+Mon,20 Apr 2020 12:53:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 12:53:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1294
+=====> settings click Move WiFi Dialog
+Mon,20 Apr 2020 12:55:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:623
+=====> kill setting progress
+Mon,20 Apr 2020 12:55:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:628
+=====> end Test
+Mon,20 Apr 2020 12:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:591
+=====> start Test
+Mon,20 Apr 2020 12:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:594
+=====> enter setting ui 
+Mon,20 Apr 2020 12:55:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 12:55:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:603
+=====> Enter settings ui
+Mon,20 Apr 2020 12:55:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 12:55:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:608
+=====> Enter wifi page
+Mon,20 Apr 2020 12:58:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 12:58:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:617
+=====> delete tracker successfully
+Mon,20 Apr 2020 12:59:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test CancelDialog  function,total count is 2
+Mon,20 Apr 2020 12:59:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:CancelDialog
+Mon,20 Apr 2020 12:59:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CancelDialog Line:1330
+=====> settings click Cancel WiFi Dialog
+Mon,20 Apr 2020 13:00:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:623
+=====> kill setting progress
+Mon,20 Apr 2020 13:00:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:628
+=====> end Test
+Mon,20 Apr 2020 13:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:591
+=====> start Test
+Mon,20 Apr 2020 13:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:594
+=====> enter setting ui 
+Mon,20 Apr 2020 13:00:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:00:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:603
+=====> Enter settings ui
+Mon,20 Apr 2020 13:00:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:00:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:608
+=====> Enter wifi page
+Mon,20 Apr 2020 13:04:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:04:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:617
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:04:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Back  function,total count is 2
+Mon,20 Apr 2020 13:04:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 13:04:30 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1342
+=====> settings click back WiFi master ui
+Mon,20 Apr 2020 13:06:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:623
+=====> kill setting progress
+Mon,20 Apr 2020 13:06:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:06:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:06:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:628
+=====> end Test
+Mon,20 Apr 2020 13:06:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:591
+=====> start Test
+Mon,20 Apr 2020 13:06:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:594
+=====> enter setting ui 
+Mon,20 Apr 2020 13:06:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:06:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:603
+=====> Enter settings ui
+Mon,20 Apr 2020 13:06:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:06:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:608
+=====> Enter wifi page
+Mon,20 Apr 2020 13:10:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:10:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:617
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:10:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test RemoveWIFI  function,total count is 2
+Mon,20 Apr 2020 13:10:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:RemoveWIFI
+Mon,20 Apr 2020 13:10:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:RemoveWIFI Line:1309
+=====> settings click remove WiFi Dialog
+Mon,20 Apr 2020 13:11:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:623
+=====> kill setting progress
+Mon,20 Apr 2020 13:11:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:11:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:11:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:628
+=====> end Test
+Mon,20 Apr 2020 13:11:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:661
+=====> start Test
+Mon,20 Apr 2020 13:11:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:664
+=====> enter setting ui 
+Mon,20 Apr 2020 13:11:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:11:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:673
+=====> Enter settings ui
+Mon,20 Apr 2020 13:11:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:11:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:678
+=====> Enter wifi page
+Mon,20 Apr 2020 13:13:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:684
+=====> Enter wifi  editor page
+Mon,20 Apr 2020 13:15:40 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:15:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:691
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:15:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_Start  function,total count is 2
+Mon,20 Apr 2020 13:15:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 13:15:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1375
+=====> settings click back WiFi master ui
+Mon,20 Apr 2020 13:17:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:697
+=====> kill setting progress
+Mon,20 Apr 2020 13:17:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:17:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:17:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:702
+=====> end Test
+Mon,20 Apr 2020 13:17:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:661
+=====> start Test
+Mon,20 Apr 2020 13:17:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:664
+=====> enter setting ui 
+Mon,20 Apr 2020 13:17:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:17:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:673
+=====> Enter settings ui
+Mon,20 Apr 2020 13:17:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:17:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:678
+=====> Enter wifi page
+Mon,20 Apr 2020 13:19:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:684
+=====> Enter wifi  editor page
+Mon,20 Apr 2020 13:21:17 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:21:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:691
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:21:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickConnectWIFI  function,total count is 2
+Mon,20 Apr 2020 13:21:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickConnectWIFI
+Mon,20 Apr 2020 13:21:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickConnectWIFI Line:1393
+=====> settings click back WiFi master ui
+Mon,20 Apr 2020 13:23:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:697
+=====> kill setting progress
+Mon,20 Apr 2020 13:23:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:702
+=====> end Test
+Mon,20 Apr 2020 13:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:661
+=====> start Test
+Mon,20 Apr 2020 13:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:664
+=====> enter setting ui 
+Mon,20 Apr 2020 13:23:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:23:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:673
+=====> Enter settings ui
+Mon,20 Apr 2020 13:23:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:23:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:678
+=====> Enter wifi page
+Mon,20 Apr 2020 13:24:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:684
+=====> Enter wifi  editor page
+Mon,20 Apr 2020 13:26:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:26:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:691
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:26:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickEliminate  function,total count is 2
+Mon,20 Apr 2020 13:26:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickEliminate
+Mon,20 Apr 2020 13:26:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickEliminate Line:1408
+=====> settings click back WiFi master ui
+Mon,20 Apr 2020 13:28:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:697
+=====> kill setting progress
+Mon,20 Apr 2020 13:28:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:28:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:28:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:702
+=====> end Test
+Mon,20 Apr 2020 13:28:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:661
+=====> start Test
+Mon,20 Apr 2020 13:28:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:664
+=====> enter setting ui 
+Mon,20 Apr 2020 13:28:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:28:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:673
+=====> Enter settings ui
+Mon,20 Apr 2020 13:28:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:28:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:678
+=====> Enter wifi page
+Mon,20 Apr 2020 13:30:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:684
+=====> Enter wifi  editor page
+Mon,20 Apr 2020 13:32:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:32:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:691
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:32:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Back  function,total count is 2
+Mon,20 Apr 2020 13:32:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 13:32:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1425
+=====> settings click back WiFi master ui
+Mon,20 Apr 2020 13:34:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:697
+=====> kill setting progress
+Mon,20 Apr 2020 13:34:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:34:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:34:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:702
+=====> end Test
+Mon,20 Apr 2020 13:34:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:661
+=====> start Test
+Mon,20 Apr 2020 13:34:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:664
+=====> enter setting ui 
+Mon,20 Apr 2020 13:34:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:34:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:673
+=====> Enter settings ui
+Mon,20 Apr 2020 13:34:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:34:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:678
+=====> Enter wifi page
+Mon,20 Apr 2020 13:36:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:684
+=====> Enter wifi  editor page
+Mon,20 Apr 2020 13:38:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:38:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:691
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:38:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_End  function,total count is 2
+Mon,20 Apr 2020 13:38:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:PageDisplay
+Mon,20 Apr 2020 13:38:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1443
+=====> settings click back WiFi master ui
+Mon,20 Apr 2020 13:39:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:697
+=====> kill setting progress
+Mon,20 Apr 2020 13:39:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:39:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:39:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:702
+=====> end Test
+Mon,20 Apr 2020 13:39:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:746
+=====> start Test
+Mon,20 Apr 2020 13:39:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:749
+=====> enter setting ui 
+Mon,20 Apr 2020 13:39:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:39:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:758
+=====> Enter settings ui
+Mon,20 Apr 2020 13:39:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:39:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:763
+=====> Enter privacy page
+Mon,20 Apr 2020 13:41:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:41:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:770
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:41:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test ClickVoiceSwitch  function,total count is 2
+Mon,20 Apr 2020 13:41:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:ClickVoiceSwitch
+Mon,20 Apr 2020 13:41:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVoiceSwitch Line:1708
+=====> settings click voice switch ui
+Mon,20 Apr 2020 13:43:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:776
+=====> kill setting progress
+Mon,20 Apr 2020 13:43:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:781
+=====> end Test
+Mon,20 Apr 2020 13:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:746
+=====> start Test
+Mon,20 Apr 2020 13:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:749
+=====> enter setting ui 
+Mon,20 Apr 2020 13:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:43:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:758
+=====> Enter settings ui
+Mon,20 Apr 2020 13:43:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:43:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:763
+=====> Enter privacy page
+Mon,20 Apr 2020 13:45:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:45:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:770
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:45:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test HelpDocument  function,total count is 2
+Mon,20 Apr 2020 13:45:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:HelpDocument
+Mon,20 Apr 2020 13:45:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:HelpDocument Line:1722
+=====> setting click voice, then click help document ui
+Mon,20 Apr 2020 13:47:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:776
+=====> kill setting progress
+Mon,20 Apr 2020 13:47:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:47:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:47:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:781
+=====> end Test
+Mon,20 Apr 2020 13:47:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:746
+=====> start Test
+Mon,20 Apr 2020 13:47:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:749
+=====> enter setting ui 
+Mon,20 Apr 2020 13:47:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:47:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:758
+=====> Enter settings ui
+Mon,20 Apr 2020 13:47:31 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:47:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:763
+=====> Enter privacy page
+Mon,20 Apr 2020 13:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:49:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:770
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:49:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test Back  function,total count is 2
+Mon,20 Apr 2020 13:49:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 13:49:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1739
+=====> settings click help document ui
+Mon,20 Apr 2020 13:51:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:776
+=====> kill setting progress
+Mon,20 Apr 2020 13:51:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:51:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:51:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:781
+=====> end Test
+Mon,20 Apr 2020 13:51:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:746
+=====> start Test
+Mon,20 Apr 2020 13:51:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:749
+=====> enter setting ui 
+Mon,20 Apr 2020 13:51:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Mon,20 Apr 2020 13:51:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:758
+=====> Enter settings ui
+Mon,20 Apr 2020 13:51:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Mon,20 Apr 2020 13:51:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:763
+=====> Enter privacy page
+Mon,20 Apr 2020 13:53:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Mon,20 Apr 2020 13:53:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:770
+=====> delete tracker successfully
+Mon,20 Apr 2020 13:53:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test PageDisplay_End  function,total count is 2
+Mon,20 Apr 2020 13:53:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Back
+Mon,20 Apr 2020 13:53:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1751
+=====> settings click help document ui

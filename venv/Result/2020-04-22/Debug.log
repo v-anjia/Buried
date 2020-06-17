@@ -1,0 +1,1290 @@
+Wed,22 Apr 2020 10:36:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:36:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenApp Line:705
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:37:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:37:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Foreground_Start Line:724
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:37:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:37:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:38:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:38:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenApp Line:705
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:38:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:38:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:39:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Foreground_Start Line:724
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:39:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:39:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:39:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Foreground_End Line:743
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:39:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:39:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:39:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:756
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:40:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:40:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:40:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:774
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:40:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:40:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:40:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:793
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:41:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:41:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:41:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Open_WIFI Line:811
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:41:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:41:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:41:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenBluetooth Line:824
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:41:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:41:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:41:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:WirelessCharging Line:838
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:42:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:42:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:42:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PrivacyMode Line:852
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:42:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:42:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:42:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickUser Line:867
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:42:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:42:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:43:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickBluetooth Line:884
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:43:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:43:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:43:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickWIFI Line:900
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:43:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:43:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:43:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickPrivacy Line:916
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:43:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:43:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:44:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVoice Line:932
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:44:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:44:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:44:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVolume Line:948
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:44:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:44:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:44:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickCurrency Line:964
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:44:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:44:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:45:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickSystem Line:980
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:45:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:45:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:45:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:45:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1468
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:45:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:45:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:45:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:46:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PrivacModeSwitch Line:1483
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:46:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:46:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:46:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:46:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:MapSwitch Line:1496
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:46:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:46:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:46:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:46:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CallSwitch Line:1517
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:46:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:47:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:47:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:47:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:DVRSwitch Line:1536
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:47:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:47:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:47:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:47:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VideoSwitch Line:1555
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:48:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:48:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:48:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:48:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:WeChat Line:1574
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:48:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:48:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:48:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:48:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CarHomeSwitch Line:1593
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:49:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:49:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:49:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VehicleSettingSwitch Line:1613
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:49:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:49:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:49:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:49:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:SetClick Line:1639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:50:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:50:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:50:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:50:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1664
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:50:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:50:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:50:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:50:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1679
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:50:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:51:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:51:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:51:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1000
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:51:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:51:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:51:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:51:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenBluetoothSwitch Line:1018
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:51:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:51:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:52:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:52:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VehicleName Line:1033
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:52:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:52:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:52:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:52:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConnectBluetooth Line:1047
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:53:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:53:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:53:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:BreakBluetooth Line:1069
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:54:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:54:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:54:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickdeleteBluetooth Line:1091
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:54:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:55:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:55:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1119
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:55:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:55:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:55:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:55:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1131
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:55:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:55:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:55:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_blue_dialog Line:596
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:56:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:56:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1150
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:57:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:57:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_blue_dialog Line:596
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:57:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:58:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickCancel Line:1178
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:58:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:58:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_blue_dialog Line:596
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:59:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:59:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1191
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:59:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:59:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:59:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 10:59:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1213
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:59:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 10:59:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 10:59:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:00:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1227
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:00:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:00:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:00:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:00:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1239
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:00:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:00:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:00:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:00:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickIgnoreWIFI Line:1251
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:00:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : /system/bin/sh: cat: /sdcard/Android/data/com.wm.tracker/files/temp/*: No such file or directory0 
+Wed,22 Apr 2020 11:00:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:01:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:01:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenWIFISwitch Line:1265
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:01:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:01:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:01:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:01:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConnectWIFI Line:1278
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:01:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:01:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:02:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:02:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:02:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1297
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:02:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:02:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:02:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:02:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:02:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CancelDialog Line:1333
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:02:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:02:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:02:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:03:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:03:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1345
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:03:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:03:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:03:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:03:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:03:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:RemoveWIFI Line:1312
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:04:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:04:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:04:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:04:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:04:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1378
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:04:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:05:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:05:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:05:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:05:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickConnectWIFI Line:1396
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:05:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:05:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:05:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:05:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:06:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickEliminate Line:1411
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:06:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:06:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:06:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:06:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:06:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1428
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:06:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:06:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:07:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:07:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:07:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1446
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:07:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:07:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:07:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:07:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVoiceSwitch Line:1711
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:07:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:07:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:08:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:08:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:HelpDocument Line:1725
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:08:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:08:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:08:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:08:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1742
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:08:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:08:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:08:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:08:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1754
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:08:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:09:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:09:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:09:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:09:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1770
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:09:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:09:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:09:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:09:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:09:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VoiceSwitch Line:1784
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:09:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:10:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:10:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:10:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:10:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1798
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:10:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:10:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:10:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:10:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:10:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickClose Line:1813
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:10:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:11:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:11:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:11:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:11:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1827
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:11:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:11:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:11:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:11:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1845
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:11:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:12:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:12:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:12:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickSwitch Line:1859
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:12:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:12:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:12:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:12:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:MediaVolume Line:1872
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:12:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:12:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:13:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:13:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConversationVolume Line:1888
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:13:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:13:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:13:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:13:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:NavigationVolume Line:1904
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:13:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:13:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:14:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:14:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VoiceVolume Line:1921
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:14:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:14:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:14:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:14:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickEqualizer Line:1938
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:14:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:14:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:14:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:15:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickSoundField Line:1956
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:15:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:15:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:15:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:15:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1973
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:15:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:16:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:16:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:16:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1989
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:16:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:16:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:16:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:16:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:16:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2008
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:16:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:17:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:17:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:17:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:17:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:EqualizerSwitch Line:2024
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:17:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:17:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:17:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:17:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:17:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:SwitchEqualizer Line:2039
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:18:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:18:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:18:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:18:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:18:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ60HZ Line:2089
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:18:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:19:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:19:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:19:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:19:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ125HZ Line:2113
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:19:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:19:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:20:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:20:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:20:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ315HZ Line:2136
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:20:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:20:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:21:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:21:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:21:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ800HZ Line:2159
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:21:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:21:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:21:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:22:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:22:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ2KHZ Line:2182
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:22:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:22:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:22:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:23:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:23:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ5KHZ Line:2205
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:23:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:23:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:23:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:23:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:24:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ12_5KHZ Line:2229
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:24:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:24:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:24:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumebalance Line:561
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:24:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:24:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2272
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:25:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:25:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:25:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumebalance Line:561
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:25:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:25:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2288
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:25:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:25:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:25:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumebalance Line:561
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:26:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:26:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2304
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:26:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:26:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:26:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:26:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2323
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:26:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:26:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:27:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:27:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:TimeFormat Line:2339
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:27:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:27:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:27:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:27:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2354
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:27:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:27:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.wm.multidisplay.client', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:28:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:28:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2370
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:28:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:28:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:28:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:28:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:28:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2389
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:29:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:29:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:29:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:29:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:29:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:SwitchTimeFormat Line:2404
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:29:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:29:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:30:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:30:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:30:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickClose Line:2419
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:30:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:30:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:30:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:30:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:30:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2435
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:30:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:30:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:31:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:31:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:31:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2450
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:31:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:31:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:31:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:31:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2468
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:32:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:32:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:32:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:32:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:FunctionDemo Line:2483
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:32:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:32:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:32:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:32:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickStorage Line:2500
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:32:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:33:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:33:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:33:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickTBox Line:2517
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:33:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:33:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:34:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:34:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickInformation Line:2537
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:34:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:34:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:34:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:34:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CilckRecoverySystem Line:2557
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:34:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:35:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:35:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:35:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2576
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:35:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 11:35:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:36:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Wed,22 Apr 2020 11:36:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2591
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13211HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Wed,22 Apr 2020 11:36:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Wed,22 Apr 2020 13:36:14 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='None' and action='Open_App' and event='Click' order by create_time
+Wed,22 Apr 2020 13:36:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:36:59 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='None' and action='Foreground' and event='Start' order by create_time
+Wed,22 Apr 2020 13:37:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:37:37 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='None' and action='Foreground' and event='End' order by create_time
+Wed,22 Apr 2020 13:38:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:38:07 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 13:38:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:38:39 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 13:39:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:39:03 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 13:39:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:39:29 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='Open_WIFI' and event='Set' order by create_time
+Wed,22 Apr 2020 13:39:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:39:54 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='OpenBluetooth' and event='Set' order by create_time
+Wed,22 Apr 2020 13:40:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:40:19 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='WirelessCharging' and event='Set' order by create_time
+Wed,22 Apr 2020 13:40:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:40:43 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='PrivacyMode' and event='Set' order by create_time
+Wed,22 Apr 2020 13:41:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:41:07 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickUser' and event='Click' order by create_time
+Wed,22 Apr 2020 13:41:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:41:30 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickBluetooth' and event='Click' order by create_time
+Wed,22 Apr 2020 13:41:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:41:53 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickWIFI' and event='Click' order by create_time
+Wed,22 Apr 2020 13:42:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:42:17 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickPrivacy' and event='Click' order by create_time
+Wed,22 Apr 2020 13:42:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:42:41 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickVoice' and event='Click' order by create_time
+Wed,22 Apr 2020 13:43:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:43:05 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickVolume' and event='Click' order by create_time
+Wed,22 Apr 2020 13:43:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:43:30 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickCurrency' and event='Click' order by create_time
+Wed,22 Apr 2020 13:43:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:43:54 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='settings' and action='ClickSystem' and event='Click' order by create_time
+Wed,22 Apr 2020 13:44:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:44:19 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 13:44:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:44:48 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='PrivacModeSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 13:45:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:45:20 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='MapSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 13:45:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:45:50 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='CallSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 13:46:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:46:20 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='DVRSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 13:46:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:46:49 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='VideoSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 13:47:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:47:21 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='WeChat' and event='Set' order by create_time
+Wed,22 Apr 2020 13:47:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:47:50 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='CarHomeSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 13:48:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:48:18 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='SetClick' and event='Set' order by create_time
+Wed,22 Apr 2020 13:48:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:48:46 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 13:49:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:49:15 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMPrivacySettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 13:49:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:49:46 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 13:50:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:50:13 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='OpenBluetoothSwitch' and event='set' order by create_time
+Wed,22 Apr 2020 13:50:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:50:37 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='VehicleName' and event='Click' order by create_time
+Wed,22 Apr 2020 13:51:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:51:10 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='ConnectBluetooth' and event='Click' order by create_time
+Wed,22 Apr 2020 13:51:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:51:39 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='BreakBluetooth' and event='Click' order by create_time
+Wed,22 Apr 2020 13:52:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:52:09 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='ClickdeleteBluetooth' and event='Click' order by create_time
+Wed,22 Apr 2020 13:52:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:52:36 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 13:53:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:53:07 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMBluetoothSettings' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 13:53:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:53:35 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMDeleteBluetoothDialog' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 13:54:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:54:05 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMDeleteBluetoothDialog' and action='ClickCancel' and event='Click' order by create_time
+Wed,22 Apr 2020 13:54:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:54:33 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMDeleteBluetoothDialog' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 13:55:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:55:06 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WifiSettings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 13:55:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:55:35 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WifiSettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 13:56:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:56:11 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WifiSettings' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 13:56:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:56:40 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WifiSettings' and action='ClickIgnoreWIFI' and event='Click' order by create_time
+Wed,22 Apr 2020 13:57:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:57:08 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WifiSettings' and action='OpenWIFISwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 13:57:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:57:39 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WifiSettings' and action='ConnectWIFI' and event='Click' order by create_time
+Wed,22 Apr 2020 13:58:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:58:11 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMRemoveWIFIDialog' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 13:58:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:58:42 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMRemoveWIFIDialog' and action='CancelDialog' and event='Click' order by create_time
+Wed,22 Apr 2020 13:59:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:59:25 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMRemoveWIFIDialog' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 13:59:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 13:59:56 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMRemoveWIFIDialog' and action='RemoveWIFI' and event='Click' order by create_time
+Wed,22 Apr 2020 14:00:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:00:31 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMEditTextActivity' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:00:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:01:02 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMEditTextActivity' and action='ClickConnectWIFI' and event='Click' order by create_time
+Wed,22 Apr 2020 14:01:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:01:55 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMEditTextActivity' and action='ClickEliminate' and event='Click' order by create_time
+Wed,22 Apr 2020 14:02:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:02:24 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMEditTextActivity' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:02:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:02:55 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMEditTextActivity' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:03:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:03:26 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSpeechSettings' and action='ClickVoiceSwitch' and event='Click' order by create_time
+Wed,22 Apr 2020 14:03:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:03:57 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSpeechSettings' and action='HelpDocument' and event='Click' order by create_time
+Wed,22 Apr 2020 14:04:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:04:29 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSpeechSettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:04:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:05:02 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSpeechSettings' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:05:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:05:32 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSwitchVoiceDialog' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:05:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:06:02 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSwitchVoiceDialog' and action='VoiceSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 14:06:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:06:30 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSwitchVoiceDialog' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:06:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:06:59 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSwitchVoiceDialog' and action='ClickClose' and event='Click' order by create_time
+Wed,22 Apr 2020 14:07:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:07:30 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSwitchVoiceDialog' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:07:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:08:00 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:08:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:08:29 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='ClickSwitch' and event='Set' order by create_time
+Wed,22 Apr 2020 14:08:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:08:57 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='MediaVolume' and event='Set' order by create_time
+Wed,22 Apr 2020 14:09:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:09:26 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='ConversationVolume' and event='Set' order by create_time
+Wed,22 Apr 2020 14:09:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:09:57 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='NavigationVolume' and event='Set' order by create_time
+Wed,22 Apr 2020 14:10:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:10:24 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='VoiceVolume' and event='Set' order by create_time
+Wed,22 Apr 2020 14:10:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:10:52 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='ClickEqualizer' and event='Click' order by create_time
+Wed,22 Apr 2020 14:11:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:11:20 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='ClickSoundField' and event='Click' order by create_time
+Wed,22 Apr 2020 14:11:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:11:49 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:12:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:12:19 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSoundSettings' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:12:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:12:48 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:13:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:13:19 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='EqualizerSwitch' and event='Click' order by create_time
+Wed,22 Apr 2020 14:13:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:13:49 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='SwitchEqualizer' and event='Set' order by create_time
+Wed,22 Apr 2020 14:14:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:14:18 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='AdjustEQ60HZ' and event='Set' order by create_time
+Wed,22 Apr 2020 14:14:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:14:50 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='AdjustEQ125HZ' and event='Set' order by create_time
+Wed,22 Apr 2020 14:15:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:15:19 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='AdjustEQ315HZ' and event='Set' order by create_time
+Wed,22 Apr 2020 14:15:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:15:48 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='AdjustEQ800HZ' and event='Set' order by create_time
+Wed,22 Apr 2020 14:16:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:16:15 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='AdjustEQ2KHZ' and event='Set' order by create_time
+Wed,22 Apr 2020 14:16:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:16:46 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='AdjustEQ5KHZ' and event='Set' order by create_time
+Wed,22 Apr 2020 14:17:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:17:19 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeEquilizerSettings' and action='AdjustEQ12.5KHZ' and event='Set' order by create_time
+Wed,22 Apr 2020 14:17:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:17:50 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeBalanceSettingsActivity' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:18:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:18:19 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeBalanceSettingsActivity' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:18:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:18:48 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMVolumeBalanceSettingsActivity' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:19:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:19:17 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMGeneralSettings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:19:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:19:48 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMGeneralSettings' and action='TimeFormat' and event='Click' order by create_time
+Wed,22 Apr 2020 14:20:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:20:15 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMGeneralSettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:20:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:20:45 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMGeneralSettings' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:21:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:21:12 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMTimeFormatDialog' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:21:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:21:41 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMTimeFormatDialog' and action='SwitchTimeFormat' and event='Set' order by create_time
+Wed,22 Apr 2020 14:22:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:22:10 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMTimeFormatDialog' and action='ClickClose' and event='Click' order by create_time
+Wed,22 Apr 2020 14:22:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:22:39 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMTimeFormatDialog' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:23:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:23:11 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMTimeFormatDialog' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:23:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:23:41 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='PageDisplay' and event='Start' order by create_time
+Wed,22 Apr 2020 14:24:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:24:11 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='FunctionDemo' and event='Click' order by create_time
+Wed,22 Apr 2020 14:24:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:24:43 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='ClickStorage' and event='Click' order by create_time
+Wed,22 Apr 2020 14:25:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:25:12 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='ClickTBox' and event='Click' order by create_time
+Wed,22 Apr 2020 14:25:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:25:41 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='ClickInformation' and event='Click' order by create_time
+Wed,22 Apr 2020 14:26:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:26:10 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='ClickRecoverySystem' and event='Click' order by create_time
+Wed,22 Apr 2020 14:26:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:26:40 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='Back' and event='Click' order by create_time
+Wed,22 Apr 2020 14:27:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Wed,22 Apr 2020 14:27:10 [DEBUG] File:None Function:None Line:None
+=====> select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day='2020-04-22' and vin_id='LSJA0000000000081' and page_name='WMSystemSettings' and action='PageDisplay' and event='End' order by create_time
+Wed,22 Apr 2020 14:27:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0

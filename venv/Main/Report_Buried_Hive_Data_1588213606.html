@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var collapsed = get_query_parameter('collapsed') || 'Passed';
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (extras.classList.contains("collapsed")) {
+            expandcollapse.classList.add("expander")
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function get_query_parameter(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    sort_column(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+
+        if (key_a == key_b) return 0;
+
+        if (reversed) {
+            return (key_a < key_b ? 1 : -1);
+        } else {
+            return (key_a > key_b ? 1 : -1);
+        }
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>Report_Buried_Hive_Data_1588213606.html</h1>
+    <p>Report generated on 30-Apr-2020 at 13:23:39 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Company</td>
+        <td>WM MOTOR</td></tr>
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>C:\Program Files\Java\jdk1.8.0_201</td></tr>
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.8.1", "pytest": "5.4.1"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.18362-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"html": "2.1.1", "metadata": "1.8.0", "repeat": "0.8.0", "report": "0.2.1"}</td></tr>
+      <tr>
+        <td>Project</td>
+        <td>Buried Point Auto</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.8.2</td></tr>
+      <tr>
+        <td>Tester</td>
+        <td>Antony WeiJiang</td></tr></table>
+    <h2>Summary</h2>
+    <p>60 tests ran in 10612.82 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">39 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">21 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">2 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PageDisplay_End[Foreground-End-None]::setup</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">file C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py, line 472<br/>      @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>          (list(set.Energy_Management[&quot;Energy_Management&quot;][1].keys())[0], \<br/>           list(set.Energy_Management[&quot;Energy_Management&quot;][1].values())[0], None)])<br/>      def test_PageDisplay_End(self, count, action, event, page):<br/><span class="error">E       fixture &#x27;count&#x27; not found</span><br/>&gt;       available fixtures: __pytest_repeat_step_number, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, extra, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py:472<br/></div></td></tr></tbody>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_ACOffAdvise[ACOffAdvise-Click-EnergyBall]::setup</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">file C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py, line 645<br/>      @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>          (list(set.EnergyBall[&quot;EnergyBall&quot;][5].keys())[0], \<br/>           list(set.EnergyBall[&quot;EnergyBall&quot;][5].values())[0], list(set.EnergyBall.keys())[0])])<br/>      def test_ACOffAdvise(self, count, action, event, page):<br/><span class="error">E       fixture &#x27;count&#x27; not found</span><br/>&gt;       available fixtures: __pytest_repeat_step_number, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, extra, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py:645<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PageDisplay_Start[Foreground-Start-None]</td>
+          <td class="col-duration">46.60</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4795CA0&gt;<br/>action = &#x27;Foreground&#x27;, event = &#x27;Start&#x27;, page = None<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.Energy_Management[&quot;Energy_Management&quot;][0].keys())[0], \<br/>         list(set.Energy_Management[&quot;Energy_Management&quot;][0].values())[0], None)])<br/>    def test_PageDisplay_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:470: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Foreground&#x27;, event = &#x27;Start&#x27;, page = None<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;None&#x27; and action=&#x27;Foreground&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 14
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : None action : Foreground  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 27<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_MileageSwitch_10KM[MileageSwitch_10KM-Click-BatteryInfo]</td>
+          <td class="col-duration">37.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC48160D0&gt;<br/>action = &#x27;MileageSwitch_10KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][0].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][0].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_MileageSwitch_10KM(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:488: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;MileageSwitch_10KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;MileageSwitch_10KM&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : MileageSwitch_10KM  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_MileageSwitch_25KM[MileageSwitch_25KM-Click-BatteryInfo]</td>
+          <td class="col-duration">66.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4816C10&gt;<br/>action = &#x27;MileageSwitch_25KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][1].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][1].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_MileageSwitch_25KM(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:494: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;MileageSwitch_25KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;MileageSwitch_25KM&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : MileageSwitch_25KM  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_MileageSwitch_50KM[MileageSwitch_50KM-Click-BatteryInfo]</td>
+          <td class="col-duration">37.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4816A90&gt;<br/>action = &#x27;MileageSwitch_50KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        ( list(set.BatteryInfo[&quot;BatteryInfo&quot;][2].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][2].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_MileageSwitch_50KM(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:500: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;MileageSwitch_50KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;MileageSwitch_50KM&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : MileageSwitch_50KM  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_MileageSwitch_100KM[MileageSwitch_100KM-Click-BatteryInfo]</td>
+          <td class="col-duration">38.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEABF81400&gt;<br/>action = &#x27;MileageSwitch_100KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][3].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][3].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_MileageSwitch_100KM(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:512: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;MileageSwitch_100KM&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;MileageSwitch_100KM&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : MileageSwitch_100KM  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_EnergyEfficiency[EnergyEfficiency-Click-BatteryInfo]</td>
+          <td class="col-duration">38.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4610640&gt;<br/>action = &#x27;EnergyEfficiency&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][4].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][4].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_EnergyEfficiency(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:518: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;EnergyEfficiency&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;EnergyEfficiency&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : EnergyEfficiency  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 27<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PowerConsumeSwitch[PowerConsumeSwitch-Click-BatteryInfo]</td>
+          <td class="col-duration">35.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC491B0A0&gt;<br/>action = &#x27;PowerConsumeSwitch&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][5].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][5].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_PowerConsumeSwitch(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:524: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PowerConsumeSwitch&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;PowerConsumeSwitch&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : PowerConsumeSwitch  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_SpeedSwitch[SpeedSwitch-Click-BatteryInfo]</td>
+          <td class="col-duration">36.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC491B100&gt;<br/>action = &#x27;SpeedSwitch&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][6].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][6].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_SpeedSwitch(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:530: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;SpeedSwitch&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;SpeedSwitch&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : SpeedSwitch  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_VoiceReport[VoiceReport-Set-BatteryInfo]</td>
+          <td class="col-duration">38.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4980FA0&gt;<br/>action = &#x27;VoiceReport&#x27;, event = &#x27;Set&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][7].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][7].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_VoiceReport(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:536: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;VoiceReport&#x27;, event = &#x27;Set&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;VoiceReport&#x27; and event=&#x27;Set&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : VoiceReport  event: Set times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_BatteryInfoForeground_Start[BatteryInfoForeground-Start-BatteryInfo]</td>
+          <td class="col-duration">35.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4980D30&gt;<br/>action = &#x27;BatteryInfoForeground&#x27;, event = &#x27;Start&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][8].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][8].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_BatteryInfoForeground_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:542: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;BatteryInfoForeground&#x27;, event = &#x27;Start&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;BatteryInfoForeground&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : BatteryInfoForeground  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 27<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_BatteryInfoForeground_End[BatteryInfoForeground-End-BatteryInfo]</td>
+          <td class="col-duration">38.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC48E4730&gt;<br/>action = &#x27;BatteryInfoForeground&#x27;, event = &#x27;End&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][9].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][9].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_BatteryInfoForeground_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:548: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;BatteryInfoForeground&#x27;, event = &#x27;End&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;BatteryInfoForeground&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : BatteryInfoForeground  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 14<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_IntoBatteryInfo[IntoBatteryInfo-Click-BatteryInfo]</td>
+          <td class="col-duration">35.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4816430&gt;<br/>action = &#x27;IntoBatteryInfo&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.BatteryInfo[&quot;BatteryInfo&quot;][10].keys())[0], \<br/>         list(set.BatteryInfo[&quot;BatteryInfo&quot;][10].values())[0], list(set.BatteryInfo.keys())[0])])<br/>    def test_IntoBatteryInfo(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:554: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;IntoBatteryInfo&#x27;, event = &#x27;Click&#x27;, page = &#x27;BatteryInfo&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;BatteryInfo&#x27; and action=&#x27;IntoBatteryInfo&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : BatteryInfo action : IntoBatteryInfo  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 27<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PeriodSwitch_Week[PeriodSwitch_Week-Click-PowerConsume]</td>
+          <td class="col-duration">35.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC481FC10&gt;<br/>action = &#x27;PeriodSwitch_Week&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.PowerConsume[&quot;PowerConsume&quot;][0].keys())[0], \<br/>         list(set.PowerConsume[&quot;PowerConsume&quot;][0].values())[0], list(set.PowerConsume.keys())[0])])<br/>    def test_PeriodSwitch_Week(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:560: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PeriodSwitch_Week&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;PowerConsume&#x27; and action=&#x27;PeriodSwitch_Week&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : PowerConsume action : PeriodSwitch_Week  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PeriodSwitch_Month[PeriodSwitch_Month-Click-PowerConsume]</td>
+          <td class="col-duration">39.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC485E070&gt;<br/>action = &#x27;PeriodSwitch_Month&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.PowerConsume[&quot;PowerConsume&quot;][1].keys())[0], \<br/>         list(set.PowerConsume[&quot;PowerConsume&quot;][1].values())[0], list(set.PowerConsume.keys())[0])])<br/>    def test_PeriodSwitch_Month(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:566: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PeriodSwitch_Month&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;PowerConsume&#x27; and action=&#x27;PeriodSwitch_Month&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : PowerConsume action : PeriodSwitch_Month  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 2<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PeriodSwitch_Year[PeriodSwitch_Year-Click-PowerConsume]</td>
+          <td class="col-duration">36.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC485EF40&gt;<br/>action = &#x27;PeriodSwitch_Year&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.PowerConsume[&quot;PowerConsume&quot;][2].keys())[0], \<br/>         list(set.PowerConsume[&quot;PowerConsume&quot;][2].values())[0], list(set.PowerConsume.keys())[0])])<br/>    def test_PeriodSwitch_Year(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:572: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PeriodSwitch_Year&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;PowerConsume&#x27; and action=&#x27;PeriodSwitch_Year&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : PowerConsume action : PeriodSwitch_Year  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PowerConsumeForeground_Start[PowerConsumeForeground-Start-PowerConsume]</td>
+          <td class="col-duration">34.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4A89280&gt;<br/>action = &#x27;PowerConsumeForeground&#x27;, event = &#x27;Start&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.PowerConsume[&quot;PowerConsume&quot;][3].keys())[0], \<br/>         list(set.PowerConsume[&quot;PowerConsume&quot;][3].values())[0], list(set.PowerConsume.keys())[0])])<br/>    def test_PowerConsumeForeground_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:578: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PowerConsumeForeground&#x27;, event = &#x27;Start&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;PowerConsume&#x27; and action=&#x27;PowerConsumeForeground&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : PowerConsume action : PowerConsumeForeground  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 6<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_PowerConsumeForeground_End[PowerConsumeForeground-End-PowerConsume]</td>
+          <td class="col-duration">34.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC48A66D0&gt;<br/>action = &#x27;PowerConsumeForeground&#x27;, event = &#x27;End&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.PowerConsume[&quot;PowerConsume&quot;][4].keys())[0], \<br/>         list(set.PowerConsume[&quot;PowerConsume&quot;][4].values())[0], list(set.PowerConsume.keys())[0])])<br/>    def test_PowerConsumeForeground_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:584: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PowerConsumeForeground&#x27;, event = &#x27;End&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;PowerConsume&#x27; and action=&#x27;PowerConsumeForeground&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : PowerConsume action : PowerConsumeForeground  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_IntoPowerConsume[IntoPowerConsume-Click-PowerConsume]</td>
+          <td class="col-duration">35.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4948D90&gt;<br/>action = &#x27;IntoPowerConsume&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.PowerConsume[&quot;PowerConsume&quot;][5].keys())[0], \<br/>         list(set.PowerConsume[&quot;PowerConsume&quot;][5].values())[0], list(set.PowerConsume.keys())[0])])<br/>    def test_IntoPowerConsume(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:590: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;IntoPowerConsume&#x27;, event = &#x27;Click&#x27;, page = &#x27;PowerConsume&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;PowerConsume&#x27; and action=&#x27;IntoPowerConsume&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : PowerConsume action : IntoPowerConsume  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 6<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_HistoricalJourney_Start[HistoricalJourneyForeground-Start-HistoricalJourney]</td>
+          <td class="col-duration">37.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4A638B0&gt;<br/>action = &#x27;HistoricalJourneyForeground&#x27;, event = &#x27;Start&#x27;<br/>page = &#x27;HistoricalJourney&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.HistoricalJourney[&quot;HistoricalJourney&quot;][0].keys())[0], \<br/>         list(set.HistoricalJourney[&quot;HistoricalJourney&quot;][0].values())[0], list(set.HistoricalJourney.keys())[0])])<br/>    def test_HistoricalJourney_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:596: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;HistoricalJourneyForeground&#x27;, event = &#x27;Start&#x27;<br/>page = &#x27;HistoricalJourney&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;HistoricalJourney&#x27; and action=&#x27;HistoricalJourneyForeground&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : HistoricalJourney action : HistoricalJourneyForeground  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_HistoricalJourneyForeground_End[HistoricalJourneyForeground-End-HistoricalJourney]</td>
+          <td class="col-duration">38.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4987EE0&gt;<br/>action = &#x27;HistoricalJourneyForeground&#x27;, event = &#x27;End&#x27;<br/>page = &#x27;HistoricalJourney&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.HistoricalJourney[&quot;HistoricalJourney&quot;][1].keys())[0], \<br/>         list(set.HistoricalJourney[&quot;HistoricalJourney&quot;][1].values())[0], list(set.HistoricalJourney.keys())[0])])<br/>    def test_HistoricalJourneyForeground_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:601: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;HistoricalJourneyForeground&#x27;, event = &#x27;End&#x27;<br/>page = &#x27;HistoricalJourney&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;HistoricalJourney&#x27; and action=&#x27;HistoricalJourneyForeground&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : HistoricalJourney action : HistoricalJourneyForeground  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_IntoHistoricalJourney[IntoHistoricalJourney-Click-HistoricalJourney]</td>
+          <td class="col-duration">37.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Energy_Management.Test_Check_Energy_Management_Hive_Result object at 0x000001CEC4A6AEE0&gt;<br/>action = &#x27;IntoHistoricalJourney&#x27;, event = &#x27;Click&#x27;, page = &#x27;HistoricalJourney&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.HistoricalJourney[&quot;HistoricalJourney&quot;][2].keys())[0], \<br/>         list(set.HistoricalJourney[&quot;HistoricalJourney&quot;][2].values())[0], list(set.HistoricalJourney.keys())[0])])<br/>    def test_IntoHistoricalJourney(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:607: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;IntoHistoricalJourney&#x27;, event = &#x27;Click&#x27;, page = &#x27;HistoricalJourney&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Energy_Management.py:96: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;HistoricalJourney&#x27; and action=&#x27;IntoHistoricalJourney&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : HistoricalJourney action : IntoHistoricalJourney  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Collect_Buried_Log::test_collect_buired_result[1803011301990049]</td>
+          <td class="col-duration">15.41</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:test_collect_buired_result Line:104
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:test_collect_buired_result Line:112
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt; /update/buried_Energy_Management.log &amp;&quot;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Energy_Management::test_PageDisplay_Start[2-Foreground-Start-None]</td>
+          <td class="col-duration">89.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:122
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PageDisplay_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:Foreground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PageDisplay_Start Line:314
+=====&gt; System Activation has showed 
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PageDisplay_Start Line:317
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.ivi.faceid&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Energy_Management::test_PageDisplay_End[2-Foreground-End-None]</td>
+          <td class="col-duration">73.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:122
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PageDisplay_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:Foreground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PageDisplay_End Line:333
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PageDisplay_End Line:336
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 87
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Energy_Management::test_OpenApp[2-OpenApp-Click-None]</td>
+          <td class="col-duration">71.68</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:122
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test OpenApp  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:OpenApp
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:OpenApp Line:353
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:OpenApp Line:356
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_MileageSwitch_10KM[2-MileageSwitch_10KM-Click-BatteryInfo]</td>
+          <td class="col-duration">65.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test MileageSwitch_10KM  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:MileageSwitch_10KM
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_10KM Line:376
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_10KM Line:379
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_MileageSwitch_25KM[2-MileageSwitch_25KM-Click-BatteryInfo]</td>
+          <td class="col-duration">61.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test MileageSwitch_25KM  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:MileageSwitch_25KM
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_25KM Line:390
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_25KM Line:393
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_MileageSwitch_50KM[2-MileageSwitch_50KM-Click-BatteryInfo]</td>
+          <td class="col-duration">63.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test MileageSwitch_50KM  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:MileageSwitch_50KM
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_50KM Line:404
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_50KM Line:407
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_MileageSwitch_100KM[2-MileageSwitch_100KM-Click-BatteryInfo]</td>
+          <td class="col-duration">62.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test MileageSwitch_100KM  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:MileageSwitch_100KM
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_100KM Line:418
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_100KM Line:421
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_EnergyEfficiency[2-EnergyEfficiency-Click-BatteryInfo]</td>
+          <td class="col-duration">68.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test EnergyEfficiency  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:EnergyEfficiency
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyEfficiency Line:433
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyEfficiency Line:436
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_PowerConsumeSwitch[2-PowerConsumeSwitch-Click-BatteryInfo]</td>
+          <td class="col-duration">61.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PowerConsumeSwitch  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:PowerConsumeSwitch
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeSwitch Line:447
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeSwitch Line:450
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 311
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_SpeedSwitch[2-SpeedSwitch-Click-BatteryInfo]</td>
+          <td class="col-duration">62.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test SpeedSwitch  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:SpeedSwitch
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:SpeedSwitch Line:459
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:SpeedSwitch Line:462
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 313
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_VoiceReport[2-VoiceReport-Set-BatteryInfo]</td>
+          <td class="col-duration">71.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test VoiceReport  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:VoiceReport
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:VoiceReport Line:471
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:VoiceReport Line:474
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 307
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_BatteryInfoForeground_Start[2-BatteryInfoForeground-Start-BatteryInfo]</td>
+          <td class="col-duration">68.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test BatteryInfoForeground_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:BatteryInfoForeground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:BatteryInfoForeground_Start Line:486
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:BatteryInfoForeground_Start Line:489
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_BatteryInfoForeground_End[2-BatteryInfoForeground-End-BatteryInfo]</td>
+          <td class="col-duration">66.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test BatteryInfoForeground_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:BatteryInfoForeground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:BatteryInfoForeground_End Line:501
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:BatteryInfoForeground_End Line:504
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 309
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:54197 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_BatteryInfo::test_IntoBatteryInfo[2-IntoBatteryInfo-Click-BatteryInfo]</td>
+          <td class="col-duration">72.16</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:169
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test IntoBatteryInfo  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:IntoBatteryInfo
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoBatteryInfo Line:515
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoBatteryInfo Line:518
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_PowerConsume::test_PeriodSwitch_Week[2-PeriodSwitch_Week-Click-PowerConsume]</td>
+          <td class="col-duration">71.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PeriodSwitch_Week  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:PeriodSwitch_Week
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Week Line:534
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Week Line:537
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_PowerConsume::test_PeriodSwitch_Month[2-PeriodSwitch_Month-Click-PowerConsume]</td>
+          <td class="col-duration">65.84</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PeriodSwitch_Month  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:PeriodSwitch_Month
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Month Line:554
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Month Line:557
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_PowerConsume::test_PeriodSwitch_Year[2-PeriodSwitch_Year-Click-PowerConsume]</td>
+          <td class="col-duration">62.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PeriodSwitch_Year  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:PeriodSwitch_Year
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Year Line:571
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Year Line:574
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_PowerConsume::test_PowerConsumeForeground_Start[2-PowerConsumeForeground-Start-PowerConsume]</td>
+          <td class="col-duration">64.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PowerConsumeForeground_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:PowerConsumeForeground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeForeground_Start Line:587
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeForeground_Start Line:590
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_PowerConsume::test_PowerConsumeForeground_End[2-PowerConsumeForeground-End-PowerConsume]</td>
+          <td class="col-duration">65.87</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test PowerConsumeForeground_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:PowerConsumeForeground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeForeground_End Line:601
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeForeground_End Line:604
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_PowerConsume::test_IntoPowerConsume[2-IntoPowerConsume-Click-PowerConsume]</td>
+          <td class="col-duration">64.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test IntoPowerConsume  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:IntoPowerConsume
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoPowerConsume Line:617
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoPowerConsume Line:620
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_HistoricalJourney::test_HistoricalJourney_Start[2-HistoricalJourneyForeground-Start-HistoricalJourney]</td>
+          <td class="col-duration">66.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:345
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test HistoricalJourneyForeground_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:HistoricalJourneyForeground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyForeground_Start Line:636
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyForeground_Start Line:639
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_HistoricalJourney::test_HistoricalJourneyForeground_End[2-HistoricalJourneyForeground-End-HistoricalJourney]</td>
+          <td class="col-duration">62.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:345
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test HistoricalJourneyForeground_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:HistoricalJourneyForeground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyForeground_End Line:650
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyForeground_End Line:653
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_HistoricalJourney::test_IntoHistoricalJourney[2-IntoHistoricalJourney-Click-HistoricalJourney]</td>
+          <td class="col-duration">62.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:345
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test IntoHistoricalJourney  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:IntoHistoricalJourney
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoHistoricalJourney Line:666
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoHistoricalJourney Line:669
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_HistoricalJourney::test_HistoricalJourneyList[2-HistoricalJourneyList-Click-HistoricalJourney]</td>
+          <td class="col-duration">89.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:345
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====&gt; kill energy management
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====&gt; start energy management<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test HistoricalJourneyList  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:HistoricalJourneyList
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyList Line:680
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyList Line:683
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.yftech.vehiclecenter&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:173
+=====&gt; delete tracker log successfully
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:299
+=====&gt; [&#x27;//*[@resource-id=&quot;com.yftech.vehiclecenter:id/rlCenter&quot;]/android.widget.FrameLayout[1]&#x27;]
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_EnergyBall::test_EconomyModeAdviseAppare[2-EconomyModeAdviseAppare-Click-EnergyBall]</td>
+          <td class="col-duration">60.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:400
+=====&gt; start Test<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test EconomyModeAdviseAppare  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:EconomyModeAdviseAppare
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EconomyModeAdviseAppare Line:700
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EconomyModeAdviseAppare Line:703
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    can:util.py:202 can config: {&#x27;bitrate&#x27;: 500000, &#x27;channel&#x27;: &#x27;PCAN_USBBUS1&#x27;, &#x27;interface&#x27;: &#x27;pcan&#x27;}
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:299
+=====&gt; The driver is not loaded
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_EnergyBall::test_EnergyRecoveryAppare[2-EnergyRecoveryAppare-Click-EnergyBall]</td>
+          <td class="col-duration">57.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:400
+=====&gt; start Test<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test EnergyRecoveryAppare  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:EnergyRecoveryAppare
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyRecoveryAppare Line:723
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyRecoveryAppare Line:726
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    can:util.py:202 can config: {&#x27;bitrate&#x27;: 500000, &#x27;channel&#x27;: &#x27;PCAN_USBBUS1&#x27;, &#x27;interface&#x27;: &#x27;pcan&#x27;}
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:299
+=====&gt; The driver is not loaded
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_EnergyBall::test_ACOffAdviseAppare[2-ACOffAdviseAppare-Click-EnergyBall]</td>
+          <td class="col-duration">61.92</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:400
+=====&gt; start Test<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test ACOffAdviseAppare  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:ACOffAdviseAppare
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:ACOffAdviseAppare Line:746
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:ACOffAdviseAppare Line:749
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    can:util.py:202 can config: {&#x27;bitrate&#x27;: 500000, &#x27;channel&#x27;: &#x27;PCAN_USBBUS1&#x27;, &#x27;interface&#x27;: &#x27;pcan&#x27;}
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:299
+=====&gt; The driver is not loaded
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_EnergyBall::test_EconomyModeAdvise[2-EnergyRecovery-Click-EnergyBall]</td>
+          <td class="col-duration">58.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:400
+=====&gt; start Test<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test EconomyModeAdvise  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:EconomyModeAdvise
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EconomyModeAdvise Line:769
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EconomyModeAdvise Line:772
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    can:util.py:202 can config: {&#x27;bitrate&#x27;: 500000, &#x27;channel&#x27;: &#x27;PCAN_USBBUS1&#x27;, &#x27;interface&#x27;: &#x27;pcan&#x27;}
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:299
+=====&gt; The driver is not loaded
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_EnergyBall::test_EnergyRecovery[2-EnergyRecovery-Click-EnergyBall]</td>
+          <td class="col-duration">56.88</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:400
+=====&gt; start Test<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test EnergyRecovery  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:EnergyRecovery
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyRecovery Line:796
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyRecovery Line:799
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    can:util.py:202 can config: {&#x27;bitrate&#x27;: 500000, &#x27;channel&#x27;: &#x27;PCAN_USBBUS1&#x27;, &#x27;interface&#x27;: &#x27;pcan&#x27;}
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:299
+=====&gt; The driver is not loaded
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_EnergyBall::test_ACOffAdvise[2-ACOffAdvise-Click-EnergyBall]</td>
+          <td class="col-duration">59.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:message Line:400
+=====&gt; start Test<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Common Line:55
+=====&gt; start test ACOffAdvise  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:282
+=====&gt; check if Action:ACOffAdvise
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:ACOffAdvise Line:822
+=====&gt; Energy Management page has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:ACOffAdvise Line:825
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13233HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    can:util.py:202 can config: {&#x27;bitrate&#x27;: 500000, &#x27;channel&#x27;: &#x27;PCAN_USBBUS1&#x27;, &#x27;interface&#x27;: &#x27;pcan&#x27;}
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:299
+=====&gt; The driver is not loaded
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:Save_TempData Line:48
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_Kill_Buried_Progress[1803011301990049]</td>
+          <td class="col-duration">7200.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:test_Kill_Buried_Progress Line:462
+=====&gt; kill logcat collect log progress<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_OpenApp[OpenApp-Click-None]</td>
+          <td class="col-duration">62.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;None&#x27; and action=&#x27;OpenApp&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : None action : OpenApp  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_HistoricalJourneyList[HistoricalJourneyList-Click-HistoricalJourney]</td>
+          <td class="col-duration">37.87</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;HistoricalJourney&#x27; and action=&#x27;HistoricalJourneyList&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : HistoricalJourney action : HistoricalJourneyList  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_EconomyModeAdviseAppare[EconomyModeAdviseAppare-Click-EnergyBall]</td>
+          <td class="col-duration">38.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;EnergyBall&#x27; and action=&#x27;EconomyModeAdviseAppare&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : EnergyBall action : EconomyModeAdviseAppare  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_EnergyRecoveryAppare[EnergyRecoveryAppare-Click-EnergyBall]</td>
+          <td class="col-duration">36.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;EnergyBall&#x27; and action=&#x27;EnergyRecoveryAppare&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : EnergyBall action : EnergyRecoveryAppare  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_ACOffAdviseAppare[ACOffAdviseAppare-Click-EnergyBall]</td>
+          <td class="col-duration">29.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;EnergyBall&#x27; and action=&#x27;ACOffAdviseAppare&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : EnergyBall action : ACOffAdviseAppare  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_EconomyModeAdvise[EnergyRecovery-Click-EnergyBall]</td>
+          <td class="col-duration">38.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;EnergyBall&#x27; and action=&#x27;EnergyRecovery&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : EnergyBall action : EnergyRecovery  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Energy_Management.py::Test_Check_Energy_Management_Hive_Result::test_EnergyRecovery[EnergyRecovery-Click-EnergyBall]</td>
+          <td class="col-duration">37.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:81
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;EnergyBall&#x27; and action=&#x27;EnergyRecovery&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:88
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:70
+=====&gt; start collect pagename : EnergyBall action : EnergyRecovery  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:75
+=====&gt; local data is : 0<br/></div></td></tr></tbody></table></body></html>

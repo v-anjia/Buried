@@ -1,0 +1,8 @@
+Mon,27 Apr 2020 10:44:29 [ERROR] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:289
+=====> atx-agent recover failed
+Mon,27 Apr 2020 10:49:09 [ERROR] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:289
+=====> atx-agent recover failed
+Mon,27 Apr 2020 10:51:44 [ERROR] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:289
+=====> atx-agent recover failed
+Mon,27 Apr 2020 13:38:17 [ERROR] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:289
+=====> -32002 Client error: <> data: , method: None

@@ -1,0 +1,1674 @@
+Thu,16 Apr 2020 11:30:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:30:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:30:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:30:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMap Line:292
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:30:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:30:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:30:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.ivi.map', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:30:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:30:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:30:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:30:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:30:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startEnergy Line:309
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:31:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:31:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:31:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:31:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:31:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:31:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:31:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:31:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMusic Line:325
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:31:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:31:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:31:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.ivi.musicplayer', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:31:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:31:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:32:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:32:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:32:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startBtPhone Line:341
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:32:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:32:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:32:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.yftech.btphone', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:32:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:32:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:32:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:32:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:32:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:32:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:32:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:32:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:32:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:32:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:33:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startFM Line:373
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:33:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:33:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:33:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:33:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:33:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:33:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:33:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:33:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSetting Line:389
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:33:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:33:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:33:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:33:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:33:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:34:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:34:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:34:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeChat Line:405
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:34:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:34:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:34:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.ivi.wechat', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:34:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:34:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:34:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:34:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:34:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startVideo Line:437
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:34:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:35:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:35:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.yftech.video', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:35:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:35:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:35:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:35:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:35:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startCarControl Line:454
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:35:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:35:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:35:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:35:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:35:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:35:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:35:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:35:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAQY Line:470
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:36:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:36:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:36:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.ivi.netvideo', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:36:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:36:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:36:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:36:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:36:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAVM Line:486
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:36:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:36:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:36:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:36:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:36:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:36:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:36:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:36:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAudioBook Line:502
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:37:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:37:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:37:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.ivi.audiobook', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:37:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:37:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:37:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:37:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:37:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSkinStore Line:519
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:37:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:37:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:37:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.living.store', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:37:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:37:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:37:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:37:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:38:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMiJia Line:535
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:38:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:38:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:38:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.ivi.mijia', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:38:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:38:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:38:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:38:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:38:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeMeet Line:551
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:38:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:38:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:38:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.living.relationship', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:38:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:38:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:38:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:39:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:39:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterWidgetPage Line:567
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:39:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:39:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:39:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:39:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:39:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:39:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:39:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:39:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterDefaultPage Line:587
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:39:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:39:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:39:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:40:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:40:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:40:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:40:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:40:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:showDefaultPage Line:601
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:40:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:40:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:40:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:40:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:40:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:40:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:40:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:40:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_Start Line:616
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:41:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:41:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:41:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:41:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:41:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:41:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:41:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:41:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_End Line:632
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:42:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:42:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:42:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:42:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:42:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:42:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:42:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 11:42:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EditApp Line:653
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:42:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 11:42:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====> enter pay page
+Thu,16 Apr 2020 11:42:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 11:42:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====> enter system desktop
+Thu,16 Apr 2020 13:43:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 3
+Thu,16 Apr 2020 13:43:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:44:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 3
+Thu,16 Apr 2020 13:44:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:45:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 3
+Thu,16 Apr 2020 13:45:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:46:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 3
+Thu,16 Apr 2020 13:46:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:46:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:46:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:47:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:47:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:47:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:47:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:48:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:48:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:48:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:48:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:49:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:49:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:49:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:49:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:50:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:50:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:51:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:51:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:51:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:51:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:52:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:52:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:52:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 2
+Thu,16 Apr 2020 13:52:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 1
+Thu,16 Apr 2020 13:53:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 37
+Thu,16 Apr 2020 13:53:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 17
+Thu,16 Apr 2020 13:54:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 3
+Thu,16 Apr 2020 13:54:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 3
+Thu,16 Apr 2020 13:54:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 3
+Thu,16 Apr 2020 13:54:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 3
+Thu,16 Apr 2020 13:55:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====> hive data is : 3
+Thu,16 Apr 2020 13:55:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 3
+Thu,16 Apr 2020 14:09:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:09:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:09:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:308
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:09:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:09:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:09:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:09:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:09:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:09:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:326
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:09:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:09:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:10:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:10:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:10:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:10:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:348
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:10:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:10:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:10:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:10:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:10:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:10:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:390
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:10:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:10:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:11:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:11:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:11:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:11:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:409
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:11:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:11:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:11:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:11:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:11:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:11:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:429
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:11:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:12:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:12:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:12:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:12:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:12:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Start Line:450
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:12:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:13:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:13:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:13:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:13:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:13:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_End Line:472
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:13:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:14:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:14:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:14:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:14:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:14:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Result Line:494
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:14:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:14:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:14:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:14:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:14:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:14:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Click Line:516
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:15:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:15:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:15:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:15:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:15:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:15:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Start Line:538
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:15:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:16:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:16:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:16:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:16:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:16:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Hide Line:560
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:16:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:16:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:16:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:17:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:17:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:17:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_End Line:584
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:17:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:17:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:17:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:17:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:17:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:17:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History Line:607
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:17:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:18:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:18:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:18:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:18:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:18:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind Line:628
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:18:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:18:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:18:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:18:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:18:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:18:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Start Line:653
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:19:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:19:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:19:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:19:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:19:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:19:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_End Line:673
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:19:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:20:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:20:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:20:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:20:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:20:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Result Line:695
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:20:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:20:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:21:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:21:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:21:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:21:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Start Line:720
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:21:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:21:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:21:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:21:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:21:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:21:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:21:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_End Line:740
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:21:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:22:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:22:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:22:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:22:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:22:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:22:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Result Line:763
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:22:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:23:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:23:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:23:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:23:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:23:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:23:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Click Line:790
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:23:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:23:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:23:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:23:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:23:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Start Line:804
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:24:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:24:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:24:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:24:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:24:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:24:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_End Line:830
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:25:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:25:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:25:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:38:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:38:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:38:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:308
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:38:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:38:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:38:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:38:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:38:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:38:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:326
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:38:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:41:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:41:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:41:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:308
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:42:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:43:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:43:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:43:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:308
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:43:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:43:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:43:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:43:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:43:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:43:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:326
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:44:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:44:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:44:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:44:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:44:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:44:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:348
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:44:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:44:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:45:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:45:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:45:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:45:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:390
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:45:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:45:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:45:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:45:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:45:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:45:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:409
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:45:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:45:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:46:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:46:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:46:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:46:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:429
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:46:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:48:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:48:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:48:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:308
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:48:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:48:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:48:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:48:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:48:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:48:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:326
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:48:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:49:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:49:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:49:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:49:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:49:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:348
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:49:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:49:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:49:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:49:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:49:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:49:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:390
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:50:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:50:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:50:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:50:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:50:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:50:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:409
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:50:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:50:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:50:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:50:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:50:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:50:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:429
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:51:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:51:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:51:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:51:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:51:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:51:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Start Line:450
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:51:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:52:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:52:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:52:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:52:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:52:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_End Line:472
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:52:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:53:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:53:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:53:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:53:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:53:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Result Line:494
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:53:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:53:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:53:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:53:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:53:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:53:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Click Line:516
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:54:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:54:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:54:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:54:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:54:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:54:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Start Line:538
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:54:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:55:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:55:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:55:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:55:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:55:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Hide Line:560
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:55:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:55:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:55:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:55:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:56:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:56:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_End Line:584
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:56:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:56:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:56:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:56:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:56:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:56:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History Line:607
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:56:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:57:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:57:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:57:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:57:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:57:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind Line:628
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:57:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:58:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:58:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:58:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:58:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:58:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Start Line:653
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:58:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:58:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:58:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:58:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:58:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:58:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_End Line:673
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:58:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:59:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:59:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:59:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 14:59:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:59:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Result Line:695
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 14:59:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 14:59:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 14:59:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:00:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:00:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:00:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Start Line:720
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:00:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:00:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:00:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:00:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:00:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:00:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:00:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_End Line:740
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:00:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:01:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:01:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:01:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:01:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:01:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:01:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Result Line:763
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:01:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:01:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:01:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:01:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:02:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:02:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:02:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Click Line:790
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:02:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:02:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:02:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:02:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:02:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Start Line:804
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:03:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:03:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:03:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:03:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:03:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:03:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_End Line:830
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:04:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:04:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:04:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:10:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:10:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:10:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:308
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:10:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:11:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:11:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:11:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:11:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:11:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:326
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:11:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:11:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:11:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:11:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:11:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:11:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:348
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:12:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:12:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:12:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:12:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:12:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:12:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:390
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:12:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:12:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:12:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:12:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:12:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:12:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:409
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:13:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:13:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:13:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:13:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:13:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:13:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:429
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:13:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:14:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:14:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:14:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:14:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:14:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Start Line:450
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:14:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:14:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:14:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:15:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:15:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:15:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_End Line:472
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:15:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:15:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:15:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:15:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:15:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:15:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Result Line:494
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:16:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:16:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:16:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:16:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:16:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:16:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Click Line:516
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:16:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:17:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:17:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:17:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:17:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:17:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Start Line:538
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:17:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:17:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:17:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:17:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:17:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:17:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Hide Line:560
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:18:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:18:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:18:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:18:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:18:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:18:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_End Line:584
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:18:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:19:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:19:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:19:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:19:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:19:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History Line:607
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:19:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:19:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:19:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:20:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:20:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:20:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind Line:628
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:20:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:20:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:20:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:20:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:20:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:20:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Start Line:653
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:20:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:21:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:21:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:21:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:21:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:21:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_End Line:673
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:21:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:21:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:21:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:21:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:21:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:22:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Result Line:695
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:22:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:22:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:22:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:22:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:22:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:22:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Start Line:720
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:22:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:23:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:23:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:23:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:23:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:23:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:23:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_End Line:740
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:23:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:23:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:23:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:23:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:24:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:24:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:24:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Result Line:763
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:24:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:24:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:24:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:24:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:24:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:24:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:24:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Click Line:790
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:25:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:25:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:25:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:25:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:25:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Start Line:804
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:26:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:26:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:26:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:26:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:26:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 15:26:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_End Line:830
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 15:26:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 15:26:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 15:27:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====> kill vehicles repair
+Thu,16 Apr 2020 17:27:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:27:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 0
+Thu,16 Apr 2020 17:28:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 2
+Thu,16 Apr 2020 17:28:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 1
+Thu,16 Apr 2020 17:29:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Thu,16 Apr 2020 17:29:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 10
+Thu,16 Apr 2020 17:29:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 19
+Thu,16 Apr 2020 17:29:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 27
+Thu,16 Apr 2020 17:30:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 20
+Thu,16 Apr 2020 17:30:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 27
+Thu,16 Apr 2020 17:30:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 4
+Thu,16 Apr 2020 17:30:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 14
+Thu,16 Apr 2020 17:31:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 4
+Thu,16 Apr 2020 17:31:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 8
+Thu,16 Apr 2020 17:31:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 3
+Thu,16 Apr 2020 17:31:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 6
+Thu,16 Apr 2020 17:32:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 3
+Thu,16 Apr 2020 17:32:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 4
+Thu,16 Apr 2020 17:32:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Thu,16 Apr 2020 17:32:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 6
+Thu,16 Apr 2020 17:33:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Thu,16 Apr 2020 17:33:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 4
+Thu,16 Apr 2020 17:33:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:33:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 2
+Thu,16 Apr 2020 17:34:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:34:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 2
+Thu,16 Apr 2020 17:34:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 4
+Thu,16 Apr 2020 17:34:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 4
+Thu,16 Apr 2020 17:35:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 4
+Thu,16 Apr 2020 17:35:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 4
+Thu,16 Apr 2020 17:35:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 3
+Thu,16 Apr 2020 17:35:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 4
+Thu,16 Apr 2020 17:36:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:36:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 1
+Thu,16 Apr 2020 17:36:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:36:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 8
+Thu,16 Apr 2020 17:37:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 4
+Thu,16 Apr 2020 17:37:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 4
+Thu,16 Apr 2020 17:37:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Thu,16 Apr 2020 17:37:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 1
+Thu,16 Apr 2020 17:38:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:38:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 8
+Thu,16 Apr 2020 17:38:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:38:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 0
+Thu,16 Apr 2020 17:39:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:39:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 0
+Thu,16 Apr 2020 17:39:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Thu,16 Apr 2020 17:39:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====> local data is : 0
+Thu,16 Apr 2020 19:14:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:14:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:14:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:15:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:306
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:15:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:15:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:15:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:15:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:16:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:317
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:16:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:17:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:17:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:17:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:17:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:18:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Get_Download_QR_Code_Click Line:335
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:18:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:18:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:18:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:18:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:20:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Activate_Click Line:350
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:20:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:20:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:20:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:20:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:21:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Close_QR_Code_Click Line:363
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:21:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:21:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:21:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:21:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:22:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:383
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:23:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:23:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:23:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:23:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:24:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:397
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:24:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:24:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:24:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:24:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:24:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:26:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Page_Click Line:415
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:26:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:26:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:27:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:27:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:28:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Agree_Select Line:432
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:28:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:28:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:28:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:28:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:28:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:29:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Confirm_Click Line:449
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:30:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:30:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:30:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:30:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:31:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:472
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:31:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:32:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:32:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:32:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:32:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:33:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:489
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:33:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:33:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 19:33:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====> echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+Thu,16 Apr 2020 19:34:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:34:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====> reboot system...
+Thu,16 Apr 2020 19:35:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Back_Click Line:508
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Thu,16 Apr 2020 19:35:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====> Result value is : 0
+Thu,16 Apr 2020 19:35:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====> lvlog collect result value is : 0 
+Thu,16 Apr 2020 21:36:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:36:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:36:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:36:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:37:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:37:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:38:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:38:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:38:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 1
+Thu,16 Apr 2020 21:38:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:39:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:39:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:39:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:39:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:40:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:40:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0
+Thu,16 Apr 2020 21:41:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:77
+=====> hive data is : 0
+Thu,16 Apr 2020 21:41:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:64
+=====> local data is : 0

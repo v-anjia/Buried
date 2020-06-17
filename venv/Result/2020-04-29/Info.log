@@ -1,0 +1,1002 @@
+Wed,29 Apr 2020 10:42:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:89
+=====> setting root partition read and write
+Wed,29 Apr 2020 10:43:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:97
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried_System_Desktop.log &"
+Wed,29 Apr 2020 10:43:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startMap  function,total count is 2
+Wed,29 Apr 2020 10:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startMap
+Wed,29 Apr 2020 10:43:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMap Line:289
+=====> Enter map app through System Desktop UI 
+Wed,29 Apr 2020 10:43:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:43:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:43:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:44:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:89
+=====> setting root partition read and write
+Wed,29 Apr 2020 10:44:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:97
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried_System_Desktop.log &"
+Wed,29 Apr 2020 10:44:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:44:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startMap  function,total count is 2
+Wed,29 Apr 2020 10:44:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startMap
+Wed,29 Apr 2020 10:44:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMap Line:289
+=====> Enter map app through System Desktop UI 
+Wed,29 Apr 2020 10:45:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:45:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:45:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:45:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startEnergy  function,total count is 2
+Wed,29 Apr 2020 10:45:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startEnergy
+Wed,29 Apr 2020 10:45:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startEnergy Line:306
+=====> Enter Energy app through System Desktop UI 
+Wed,29 Apr 2020 10:45:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:45:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:45:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:45:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startMusic  function,total count is 2
+Wed,29 Apr 2020 10:45:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startMusic
+Wed,29 Apr 2020 10:45:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMusic Line:322
+=====> Enter Music app through System Desktop UI 
+Wed,29 Apr 2020 10:46:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:46:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:46:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:46:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startBtPhone  function,total count is 2
+Wed,29 Apr 2020 10:46:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startBtPhone
+Wed,29 Apr 2020 10:46:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startBtPhone Line:338
+=====> Enter BtPhone app through System Desktop UI 
+Wed,29 Apr 2020 10:46:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:46:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:46:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:47:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:47:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:47:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:47:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startFM  function,total count is 2
+Wed,29 Apr 2020 10:47:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startFM
+Wed,29 Apr 2020 10:47:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startFM Line:370
+=====> Enter FM app through System Desktop UI 
+Wed,29 Apr 2020 10:47:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:47:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:47:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:47:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startSetting  function,total count is 2
+Wed,29 Apr 2020 10:47:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startSetting
+Wed,29 Apr 2020 10:47:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSetting Line:386
+=====> Enter Settings app through System Desktop UI 
+Wed,29 Apr 2020 10:48:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:48:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:48:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:48:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startWeChat  function,total count is 2
+Wed,29 Apr 2020 10:48:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startWeChat
+Wed,29 Apr 2020 10:48:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeChat Line:402
+=====> Enter WeChat app through System Desktop UI 
+Wed,29 Apr 2020 10:48:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:48:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:48:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:48:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startVideo  function,total count is 2
+Wed,29 Apr 2020 10:48:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startVideo
+Wed,29 Apr 2020 10:48:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startVideo Line:434
+=====> Enter Video app through System Desktop UI 
+Wed,29 Apr 2020 10:49:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:49:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:49:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:49:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startCarControl  function,total count is 2
+Wed,29 Apr 2020 10:49:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startCarControl
+Wed,29 Apr 2020 10:49:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startCarControl Line:451
+=====> Enter Car Control app through System Desktop UI 
+Wed,29 Apr 2020 10:49:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:49:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:49:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:50:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startAQY  function,total count is 2
+Wed,29 Apr 2020 10:50:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startAQY
+Wed,29 Apr 2020 10:50:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAQY Line:467
+=====> Enter AQY app through System Desktop UI 
+Wed,29 Apr 2020 10:50:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:50:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:50:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:50:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startAVM  function,total count is 2
+Wed,29 Apr 2020 10:50:45 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startAVM
+Wed,29 Apr 2020 10:50:45 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAVM Line:483
+=====> Enter AVM app through System Desktop UI 
+Wed,29 Apr 2020 10:50:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:50:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:51:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:51:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startAudioBook  function,total count is 2
+Wed,29 Apr 2020 10:51:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startAudioBook
+Wed,29 Apr 2020 10:51:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAudioBook Line:499
+=====> Enter Audio book app through System Desktop UI 
+Wed,29 Apr 2020 10:51:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:51:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:51:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:51:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startSkinStore  function,total count is 2
+Wed,29 Apr 2020 10:51:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startSkinStore
+Wed,29 Apr 2020 10:51:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSkinStore Line:516
+=====> Enter skin store app through System Desktop UI 
+Wed,29 Apr 2020 10:52:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:52:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:52:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:52:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startMiJia  function,total count is 2
+Wed,29 Apr 2020 10:52:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startMiJia
+Wed,29 Apr 2020 10:52:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMiJia Line:532
+=====> Enter mi jia app through System Desktop UI 
+Wed,29 Apr 2020 10:52:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:52:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:52:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:53:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test startWeMeet  function,total count is 2
+Wed,29 Apr 2020 10:53:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:startWeMeet
+Wed,29 Apr 2020 10:53:03 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeMeet Line:548
+=====> Enter we meet app through System Desktop UI 
+Wed,29 Apr 2020 10:53:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:53:20 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:53:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====> start Test
+Wed,29 Apr 2020 10:53:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test EnterWidgetPage  function,total count is 2
+Wed,29 Apr 2020 10:53:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:EnterWidgetPage
+Wed,29 Apr 2020 10:53:42 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterWidgetPage Line:564
+=====> Enter widget page app through System Desktop UI 
+Wed,29 Apr 2020 10:54:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:113
+=====> end Test
+Wed,29 Apr 2020 10:54:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:116
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:54:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====> start Test
+Wed,29 Apr 2020 10:54:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test EnterDefaultPage  function,total count is 2
+Wed,29 Apr 2020 10:54:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:EnterDefaultPage
+Wed,29 Apr 2020 10:54:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterDefaultPage Line:584
+=====> Enter Default page  through System Desktop UI 
+Wed,29 Apr 2020 10:54:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:242
+=====> end Test
+Wed,29 Apr 2020 10:54:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:245
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:54:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====> start Test
+Wed,29 Apr 2020 10:54:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test showDefaultPage  function,total count is 2
+Wed,29 Apr 2020 10:54:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:showDefaultPage
+Wed,29 Apr 2020 10:54:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:showDefaultPage Line:598
+=====> Show Default page  through System Desktop UI 
+Wed,29 Apr 2020 10:55:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:242
+=====> end Test
+Wed,29 Apr 2020 10:55:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:245
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:55:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====> start Test
+Wed,29 Apr 2020 10:55:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test editingWidget_Start  function,total count is 2
+Wed,29 Apr 2020 10:55:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:editingWidget
+Wed,29 Apr 2020 10:55:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_Start Line:613
+=====> Show Default page  through System Desktop UI 
+Wed,29 Apr 2020 10:55:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:242
+=====> end Test
+Wed,29 Apr 2020 10:55:53 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:245
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:56:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====> start Test
+Wed,29 Apr 2020 10:56:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test editingWidget_End  function,total count is 2
+Wed,29 Apr 2020 10:56:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:editingWidget
+Wed,29 Apr 2020 10:56:14 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_End Line:629
+=====> Show Default page  through System Desktop UI 
+Wed,29 Apr 2020 10:56:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:242
+=====> end Test
+Wed,29 Apr 2020 10:56:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:245
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:57:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====> start Test
+Wed,29 Apr 2020 10:57:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====> start test EditApp  function,total count is 2
+Wed,29 Apr 2020 10:57:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====> check if Action:editingWidget
+Wed,29 Apr 2020 10:57:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EditApp Line:650
+=====> Show Default page  through System Desktop UI 
+Wed,29 Apr 2020 10:57:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:242
+=====> end Test
+Wed,29 Apr 2020 10:57:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:245
+=====> kill vehicles repair progress 
+Wed,29 Apr 2020 10:57:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Kill_Buried_Progress Line:288
+=====> kill logcat collect log progress
+Wed,29 Apr 2020 12:57:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 12:58:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startMap  event: Click times
+Wed,29 Apr 2020 12:58:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 12:59:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startEnergy  event: Click times
+Wed,29 Apr 2020 12:59:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 12:59:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startMusic  event: Click times
+Wed,29 Apr 2020 12:59:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:00:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startBtPhone  event: Click times
+Wed,29 Apr 2020 13:00:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:01:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startFM  event: Click times
+Wed,29 Apr 2020 13:01:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:01:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startSetting  event: Click times
+Wed,29 Apr 2020 13:01:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:02:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startWeChat  event: Click times
+Wed,29 Apr 2020 13:02:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:02:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startVideo  event: Click times
+Wed,29 Apr 2020 13:02:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:03:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startCarControl  event: Click times
+Wed,29 Apr 2020 13:03:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:03:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startAQY  event: Click times
+Wed,29 Apr 2020 13:03:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:04:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startAVM  event: Click times
+Wed,29 Apr 2020 13:04:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:04:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startAudioBook  event: Click times
+Wed,29 Apr 2020 13:04:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:05:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startSkinStore  event: Click times
+Wed,29 Apr 2020 13:05:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:05:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startMiJia  event: Click times
+Wed,29 Apr 2020 13:05:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:06:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Default action : startWeMeet  event: Click times
+Wed,29 Apr 2020 13:06:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:06:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Widget action : EnterDefaultPage  event: Click times
+Wed,29 Apr 2020 13:06:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:07:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Widget action : showDefaultPage  event: Click times
+Wed,29 Apr 2020 13:07:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:07:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Widget action : editingWidget  event: Start times
+Wed,29 Apr 2020 13:07:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:08:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Widget action : editingWidget  event: End times
+Wed,29 Apr 2020 13:08:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====> start collect hive data
+Wed,29 Apr 2020 13:08:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====> start collect pagename : Widget action : EditApp  event: Click times
+Wed,29 Apr 2020 13:08:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Delete_buired_log Line:437
+=====> setting root partition read and write
+Wed,29 Apr 2020 13:08:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Delete_buired_log Line:445
+=====> execute cmd is :adb -s 1803011301990049 shell "rm -rf /update/buried_System_Desktop.log"
+Wed,29 Apr 2020 16:39:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:test_collect_buired_result Line:105
+=====> setting root partition read and write
+Wed,29 Apr 2020 16:39:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:test_collect_buired_result Line:113
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 16:39:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 16:39:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 16:39:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 16:39:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 16:40:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 16:40:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 16:40:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_Start  function,total count is 2
+Wed,29 Apr 2020 16:40:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 16:40:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:303
+=====> System Activation has showed 
+Wed,29 Apr 2020 16:40:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 16:41:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:141
+=====> end Test
+Wed,29 Apr 2020 16:41:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 16:41:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 16:41:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 16:41:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 16:42:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 16:42:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 16:42:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_End  function,total count is 2
+Wed,29 Apr 2020 16:42:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 16:42:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:314
+=====> Enter settings page 
+Wed,29 Apr 2020 16:43:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 16:43:17 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 16:57:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 16:57:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 16:57:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 16:57:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 16:57:53 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 16:58:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 16:58:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 16:58:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 16:58:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_Start  function,total count is 2
+Wed,29 Apr 2020 16:58:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 16:58:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:303
+=====> System Activation has showed 
+Wed,29 Apr 2020 16:58:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 16:59:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 16:59:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 16:59:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 16:59:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 16:59:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:00:13 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:00:22 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:00:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:00:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:00:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_End  function,total count is 2
+Wed,29 Apr 2020 17:00:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 17:00:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:314
+=====> Enter settings page 
+Wed,29 Apr 2020 17:00:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:01:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:02:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:02:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:02:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:02:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:02:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:02:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:02:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:02:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:03:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:03:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Get_Download_QR_Code_Click  function,total count is 2
+Wed,29 Apr 2020 17:03:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Get_Download_QR_Code_Click
+Wed,29 Apr 2020 17:03:15 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Get_Download_QR_Code_Click Line:332
+=====> Enter settings page 
+Wed,29 Apr 2020 17:03:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:04:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:04:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:04:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:04:56 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:04:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:05:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:05:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:05:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:05:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:05:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Activate_Click  function,total count is 2
+Wed,29 Apr 2020 17:05:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Activate_Click
+Wed,29 Apr 2020 17:05:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Activate_Click Line:347
+=====> Enter settings page 
+Wed,29 Apr 2020 17:06:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:07:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:07:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:07:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:07:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:07:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:07:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:08:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:08:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:08:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:08:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Close_QR_Code_Click  function,total count is 2
+Wed,29 Apr 2020 17:08:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Close_QR_Code_Click
+Wed,29 Apr 2020 17:08:19 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Close_QR_Code_Click Line:360
+=====> Enter settings page 
+Wed,29 Apr 2020 17:09:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:10:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:10:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 17:10:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:10:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:10:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:10:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:10:52 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:10:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:11:01 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:11:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_Start  function,total count is 2
+Wed,29 Apr 2020 17:11:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 17:11:09 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:380
+=====> Disclaimer page show
+Wed,29 Apr 2020 17:11:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:12:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:224
+=====> end Test
+Wed,29 Apr 2020 17:12:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 17:12:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:12:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:12:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:13:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:13:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:13:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:13:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:13:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_End  function,total count is 2
+Wed,29 Apr 2020 17:13:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 17:13:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:394
+=====> Disclaimer page show
+Wed,29 Apr 2020 17:14:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:14:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:15:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:224
+=====> end Test
+Wed,29 Apr 2020 17:15:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 17:15:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:15:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:15:49 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:16:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:49:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:49:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:49:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:49:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:50:00 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:50:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:50:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:50:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:50:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_Start  function,total count is 2
+Wed,29 Apr 2020 17:50:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 17:50:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:303
+=====> System Activation has showed 
+Wed,29 Apr 2020 17:50:43 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:51:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:51:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:51:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:51:50 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:51:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:52:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:52:33 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:52:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:52:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:52:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_End  function,total count is 2
+Wed,29 Apr 2020 17:52:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 17:52:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:314
+=====> Enter settings page 
+Wed,29 Apr 2020 17:53:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:53:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:54:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:54:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:54:22 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:54:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:54:27 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:55:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:55:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:55:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:55:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:55:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Get_Download_QR_Code_Click  function,total count is 2
+Wed,29 Apr 2020 17:55:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Get_Download_QR_Code_Click
+Wed,29 Apr 2020 17:55:28 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Get_Download_QR_Code_Click Line:332
+=====> Enter settings page 
+Wed,29 Apr 2020 17:55:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:56:58 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:57:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:57:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:57:08 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:57:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 17:57:43 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 17:57:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 17:57:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 17:58:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 17:58:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Activate_Click  function,total count is 2
+Wed,29 Apr 2020 17:58:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Activate_Click
+Wed,29 Apr 2020 17:58:07 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Activate_Click Line:347
+=====> Enter settings page 
+Wed,29 Apr 2020 17:58:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 17:59:40 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 17:59:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====> start Test
+Wed,29 Apr 2020 17:59:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====> modify flag.json file 
+Wed,29 Apr 2020 17:59:46 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 17:59:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:00:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:00:34 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:00:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:00:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:00:48 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Close_QR_Code_Click  function,total count is 2
+Wed,29 Apr 2020 18:00:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Close_QR_Code_Click
+Wed,29 Apr 2020 18:00:48 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Close_QR_Code_Click Line:360
+=====> Enter settings page 
+Wed,29 Apr 2020 18:01:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:02:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:153
+=====> end Test
+Wed,29 Apr 2020 18:02:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 18:02:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:02:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:02:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:03:20 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:03:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:03:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:03:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:03:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_Start  function,total count is 2
+Wed,29 Apr 2020 18:03:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 18:03:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:380
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:04:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:05:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:224
+=====> end Test
+Wed,29 Apr 2020 18:05:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 18:05:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:05:35 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:05:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:06:16 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:06:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:06:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:06:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:06:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_End  function,total count is 2
+Wed,29 Apr 2020 18:06:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 18:06:36 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:394
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:07:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:07:19 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:08:15 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:224
+=====> end Test
+Wed,29 Apr 2020 18:08:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 18:08:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:08:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:08:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:09:04 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:09:12 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:09:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:09:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:09:29 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Disclaimer_Page_Click  function,total count is 2
+Wed,29 Apr 2020 18:09:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Disclaimer_Page_Click
+Wed,29 Apr 2020 18:09:29 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Page_Click Line:412
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:10:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:10:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:11:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:224
+=====> end Test
+Wed,29 Apr 2020 18:11:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 18:11:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:11:21 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:11:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:11:58 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:12:06 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:12:06 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:12:16 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:12:24 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Disclaimer_Agree_Select  function,total count is 2
+Wed,29 Apr 2020 18:12:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Disclaimer_Agree_Select
+Wed,29 Apr 2020 18:12:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Agree_Select Line:429
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:12:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:13:07 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:14:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:224
+=====> end Test
+Wed,29 Apr 2020 18:14:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====> start Test
+Wed,29 Apr 2020 18:14:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:14:10 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:14:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:14:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:14:55 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:14:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:15:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:15:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Confirm_Click  function,total count is 2
+Wed,29 Apr 2020 18:15:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Confirm_Click
+Wed,29 Apr 2020 18:15:11 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Confirm_Click Line:446
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:15:49 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:15:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:16:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:224
+=====> end Test
+Wed,29 Apr 2020 18:16:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:265
+=====> start Test
+Wed,29 Apr 2020 18:16:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:268
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:17:02 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:17:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:279
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:17:35 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:17:44 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:17:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:284
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:17:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:292
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:18:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_Start  function,total count is 2
+Wed,29 Apr 2020 18:18:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 18:18:01 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:469
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:18:37 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:18:46 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:19:44 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:297
+=====> end Test
+Wed,29 Apr 2020 18:19:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:265
+=====> start Test
+Wed,29 Apr 2020 18:19:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:268
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:19:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:19:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:279
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:20:24 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:20:32 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:20:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:284
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:20:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:292
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:20:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test PageDisplay_End  function,total count is 2
+Wed,29 Apr 2020 18:20:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:PageDisplay
+Wed,29 Apr 2020 18:20:47 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:486
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:21:25 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:21:33 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:22:30 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:297
+=====> end Test
+Wed,29 Apr 2020 18:22:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:265
+=====> start Test
+Wed,29 Apr 2020 18:22:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:268
+=====> modify flag.json file 
+Wed,29 Apr 2020 18:22:39 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:22:39 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:279
+=====> delete tracker successfully
+Wed,29 Apr 2020 18:23:18 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====> wait adb alive
+Wed,29 Apr 2020 18:23:26 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====> system activation has showed
+Wed,29 Apr 2020 18:23:26 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:284
+=====> setting root partition read and write
+Wed,29 Apr 2020 18:23:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:292
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" >> /update/buried_System_Activation.log &"
+Wed,29 Apr 2020 18:23:41 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====> start test Back_Click  function,total count is 2
+Wed,29 Apr 2020 18:23:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====> check if Action:Back_Click
+Wed,29 Apr 2020 18:23:41 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Back_Click Line:505
+=====> Disclaimer page show
+Wed,29 Apr 2020 18:24:27 [INFO ] File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====> delete tracker log successfully
+Wed,29 Apr 2020 18:24:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====> save data to /update/ directory
+Wed,29 Apr 2020 18:25:32 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:297
+=====> end Test
+Wed,29 Apr 2020 18:25:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:test_Kill_Buried_Progress Line:326
+=====> kill logcat collect log progress
+Wed,29 Apr 2020 20:25:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:26:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Activate_Page action : PageDisplay  event: Start times
+Wed,29 Apr 2020 20:26:25 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:27:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Activate_Page action : PageDisplay  event: End times
+Wed,29 Apr 2020 20:27:02 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:27:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Activate_Page action : Get_Download_QR_Code_Click  event: Click times
+Wed,29 Apr 2020 20:27:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:28:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Activate_Page action : Activate_Click  event: Click times
+Wed,29 Apr 2020 20:28:34 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:29:09 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Welcome_Page action : PageDisplay  event: Start times
+Wed,29 Apr 2020 20:29:10 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:29:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Welcome_Page action : PageDisplay  event: End times
+Wed,29 Apr 2020 20:29:45 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:30:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Welcome_Page action : Disclaimer_Page_Click  event: Click times
+Wed,29 Apr 2020 20:30:21 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:30:55 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Welcome_Page action : Disclaimer_Agree_Select  event: Set times
+Wed,29 Apr 2020 20:30:56 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====> start collect hive data
+Wed,29 Apr 2020 20:31:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====> start collect pagename : Welcome_Page action : Confirm_Click  event: Click times

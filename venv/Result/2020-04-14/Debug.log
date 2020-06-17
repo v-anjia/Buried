@@ -1,0 +1,850 @@
+Tue,14 Apr 2020 16:03:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:03:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:03:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:03:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMap Line:959
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:33:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:33:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:33:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:33:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMap Line:959
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:33:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 16:33:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:33:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.map', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:33:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:34:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:34:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:34:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:34:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startEnergy Line:976
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:34:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 16:34:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:34:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:34:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:34:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:34:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:34:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:34:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMusic Line:992
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:35:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 16:35:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:35:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.musicplayer', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:35:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:35:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:35:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:35:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:35:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startBtPhone Line:1008
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:35:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 16:35:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:35:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.btphone', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:35:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:35:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:35:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:35:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:42:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:70
+=====> hive data is : 0
+Tue,14 Apr 2020 16:42:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 0
+Tue,14 Apr 2020 16:46:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:46:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====> local data is : 0
+Tue,14 Apr 2020 16:48:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:48:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:52:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:52:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:52:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:52:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:52:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:52:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:53:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:53:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:53:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:53:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:54:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:54:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:54:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:54:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:54:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:54:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:55:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:55:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:55:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:55:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:55:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:55:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:56:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:56:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:56:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:56:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:57:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:57:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:57:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:57:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:57:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 16:57:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Tue,14 Apr 2020 16:59:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:59:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:59:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:59:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMap Line:959
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:59:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 16:59:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:59:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.map', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:59:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:59:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 16:59:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 16:59:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 16:59:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startEnergy Line:976
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:00:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:00:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:00:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:00:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:00:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:00:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:00:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:00:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMusic Line:992
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:00:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:00:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:00:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.musicplayer', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:00:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:00:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:00:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:00:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:01:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startBtPhone Line:1008
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:01:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:01:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:01:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.btphone', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:01:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:01:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:01:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:01:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:01:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:01:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:01:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:01:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:01:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:01:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:02:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startFM Line:1040
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:02:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:02:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:02:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:02:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:02:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:02:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:02:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:02:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startSetting Line:1056
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:02:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:02:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:02:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:02:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:02:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:02:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:03:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:03:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startWeChat Line:1072
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:03:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:03:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:03:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.wechat', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:03:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:03:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:03:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:03:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:03:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startVideo Line:1104
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:03:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:03:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:03:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.video', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:03:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:04:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:04:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:04:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:04:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startCarControl Line:1121
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:04:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:04:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:04:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:04:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:04:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:04:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:04:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:04:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startAQY Line:1137
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:05:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:05:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:05:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.netvideo', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:05:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:05:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:05:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:05:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:05:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startAVM Line:1153
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:05:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:05:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:05:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:05:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:05:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:05:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:05:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:06:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startAudioBook Line:1169
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:06:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:06:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:06:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.audiobook', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:06:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:06:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:06:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:06:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:06:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startSkinStore Line:1186
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:06:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:06:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:06:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.living.store', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:06:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:06:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:06:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:06:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:07:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMiJia Line:1202
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:07:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:07:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:07:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.mijia', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:07:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:07:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:07:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:07:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:07:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startWeMeet Line:1218
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:07:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:07:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:07:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.living.relationship', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:07:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:08:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:08:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:08:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:08:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:EnterWidgetPage Line:1234
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:08:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:08:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:08:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:08:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:08:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:08:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:08:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:08:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:EnterDefaultPage Line:1254
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:09:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:09:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:09:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:09:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:16:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:16:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:16:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:16:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMap Line:959
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:16:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:16:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:16:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.map', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:16:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:16:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:16:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:16:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:17:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startEnergy Line:976
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:17:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:17:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:17:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:17:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:17:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:17:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:17:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:17:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMusic Line:992
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:17:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:17:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:17:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.musicplayer', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:17:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:17:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:17:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:17:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:18:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startBtPhone Line:1008
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:18:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:18:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:18:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.btphone', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:18:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:18:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:18:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:18:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:18:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:18:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:18:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:18:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:18:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:18:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:19:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startFM Line:1040
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:19:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:19:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:19:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:19:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:19:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:19:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:19:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:19:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startSetting Line:1056
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:19:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:19:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:19:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:19:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:19:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:19:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:20:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:20:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startWeChat Line:1072
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:20:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:20:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:20:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.wechat', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:20:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:20:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:20:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:20:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:20:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startVideo Line:1104
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:20:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:20:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:20:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.video', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:20:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:21:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:21:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:21:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:21:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startCarControl Line:1121
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:21:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:21:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:21:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:21:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:21:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:21:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:21:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:21:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startAQY Line:1137
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:22:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:22:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:22:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.netvideo', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:22:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:22:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:22:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:22:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:22:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startAVM Line:1153
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:22:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:22:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:22:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:22:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:22:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:22:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:22:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:23:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startAudioBook Line:1169
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:23:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:23:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:23:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.audiobook', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:23:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:23:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:23:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:23:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:23:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startSkinStore Line:1186
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:23:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:23:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:23:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.living.store', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:23:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:23:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:23:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:23:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:24:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startMiJia Line:1202
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:24:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:24:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:24:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.ivi.mijia', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:24:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:24:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:24:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:24:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:24:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:startWeMeet Line:1218
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:24:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:24:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:24:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.living.relationship', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:24:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:24:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:24:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:24:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:25:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:EnterWidgetPage Line:1234
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:25:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:25:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:25:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:25:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:25:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:25:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:25:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:25:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:EnterDefaultPage Line:1254
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:25:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:25:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:25:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:25:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:26:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:26:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:26:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:26:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:showDefaultPage Line:1268
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:26:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:26:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:26:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:26:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:26:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:26:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:26:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:26:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:editingWidget_Start Line:1283
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:27:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:27:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:27:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:27:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:27:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:27:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:27:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:27:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:editingWidget_End Line:1299
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:28:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:28:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:28:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:28:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:28:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:28:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:28:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 17:28:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:EditApp Line:1320
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:28:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:warpper Line:936
+=====> lvlog collect result value is : 0 
+Tue,14 Apr 2020 17:29:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:743
+=====> enter pay page
+Tue,14 Apr 2020 17:29:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:746
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13190HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Tue,14 Apr 2020 17:29:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Check_Hive_Result\System_Desktop.py Function:enter_system_desktop Line:749
+=====> enter system desktop
+Tue,14 Apr 2020 19:29:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:29:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:29:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:29:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:30:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:30:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:30:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:30:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:31:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:31:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:31:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:31:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:31:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:31:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:32:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:32:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:32:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:32:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:33:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:33:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:33:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:33:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:33:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:33:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:34:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:34:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:34:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:34:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:34:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:34:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 1
+Tue,14 Apr 2020 19:35:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Tue,14 Apr 2020 19:35:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 2

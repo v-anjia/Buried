@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var collapsed = get_query_parameter('collapsed') || 'Passed';
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (extras.classList.contains("collapsed")) {
+            expandcollapse.classList.add("expander")
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function get_query_parameter(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    sort_column(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+
+        if (key_a == key_b) return 0;
+
+        if (reversed) {
+            return (key_a < key_b ? 1 : -1);
+        } else {
+            return (key_a > key_b ? 1 : -1);
+        }
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>Report_Buried_Hive_Data_1588153751.html</h1>
+    <p>Report generated on 29-Apr-2020 at 20:31:31 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Company</td>
+        <td>WM MOTOR</td></tr>
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>C:\Program Files\Java\jdk1.8.0_201</td></tr>
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.8.1", "pytest": "5.4.1"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.18362-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"html": "2.1.1", "metadata": "1.8.0", "repeat": "0.8.0", "report": "0.2.1"}</td></tr>
+      <tr>
+        <td>Project</td>
+        <td>Buried Point Auto</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.8.2</td></tr>
+      <tr>
+        <td>Tester</td>
+        <td>Antony WeiJiang</td></tr></table>
+    <h2>Summary</h2>
+    <p>23 tests ran in 9738.61 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">17 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">6 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">1 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Close_QR_Code_Click[Close_QR_Code_Click-Click-Activate_Page]::setup</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">file C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py, line 354<br/>      @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>          (list(set.Activate_Page[&quot;Activate_Page&quot;][4].keys())[0], \<br/>           list(set.Activate_Page[&quot;Activate_Page&quot;][4].values())[0], list(set.Activate_Page.keys())[0])])<br/>      def test_Close_QR_Code_Click(self, count, action, event, page):<br/><span class="error">E       fixture &#x27;count&#x27; not found</span><br/>&gt;       available fixtures: __pytest_repeat_step_number, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, extra, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py:354<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Activate_PageDisplay_Start[PageDisplay-Start-Activate_Page]</td>
+          <td class="col-duration">51.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Activation.Test_Check_System_Activation_Hive_Result object at 0x0000026E36C0C0A0&gt;<br/>action = &#x27;PageDisplay&#x27;, event = &#x27;Start&#x27;, page = &#x27;Activate_Page&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.Activate_Page[&quot;Activate_Page&quot;][0].keys())[0], \<br/>         list(set.Activate_Page[&quot;Activate_Page&quot;][0].values())[0], list(set.Activate_Page.keys())[0])])<br/>    def test_Activate_PageDisplay_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Activation.py:334: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PageDisplay&#x27;, event = &#x27;Start&#x27;, page = &#x27;Activate_Page&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Activation.py:97: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Activate_Page&#x27; and action=&#x27;PageDisplay&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Activate_Page action : PageDisplay  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Activate_PageDisplay_End[PageDisplay-End-Activate_Page]</td>
+          <td class="col-duration">36.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Activation.Test_Check_System_Activation_Hive_Result object at 0x0000026E36C18520&gt;<br/>action = &#x27;PageDisplay&#x27;, event = &#x27;End&#x27;, page = &#x27;Activate_Page&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.Activate_Page[&quot;Activate_Page&quot;][1].keys())[0], \<br/>         list(set.Activate_Page[&quot;Activate_Page&quot;][1].values())[0], list(set.Activate_Page.keys())[0])])<br/>    def test_Activate_PageDisplay_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Activation.py:340: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PageDisplay&#x27;, event = &#x27;End&#x27;, page = &#x27;Activate_Page&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Activation.py:97: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Activate_Page&#x27; and action=&#x27;PageDisplay&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Activate_Page action : PageDisplay  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 3<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Activate_Click[Activate_Click-Click-Activate_Page]</td>
+          <td class="col-duration">40.41</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Activation.Test_Check_System_Activation_Hive_Result object at 0x0000026E36C18AC0&gt;<br/>action = &#x27;Activate_Click&#x27;, event = &#x27;Click&#x27;, page = &#x27;Activate_Page&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.Activate_Page[&quot;Activate_Page&quot;][3].keys())[0], \<br/>         list(set.Activate_Page[&quot;Activate_Page&quot;][3].values())[0], list(set.Activate_Page.keys())[0])])<br/>    def test_Activate_Click(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Activation.py:352: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Activate_Click&#x27;, event = &#x27;Click&#x27;, page = &#x27;Activate_Page&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Activation.py:97: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Activate_Page&#x27; and action=&#x27;Activate_Click&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Activate_Page action : Activate_Click  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Welcome_Page_PageDisplay_Start[PageDisplay-Start-Welcome_Page]</td>
+          <td class="col-duration">35.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Activation.Test_Check_System_Activation_Hive_Result object at 0x0000026E36D0B3D0&gt;<br/>action = &#x27;PageDisplay&#x27;, event = &#x27;Start&#x27;, page = &#x27;Welcome_Page&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.Welcome_Page[&quot;Welcome_Page&quot;][0].keys())[0], \<br/>         list(set.Welcome_Page[&quot;Welcome_Page&quot;][0].values())[0], list(set.Welcome_Page.keys())[0])])<br/>    def test_Welcome_Page_PageDisplay_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Activation.py:364: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PageDisplay&#x27;, event = &#x27;Start&#x27;, page = &#x27;Welcome_Page&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Activation.py:97: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Welcome_Page&#x27; and action=&#x27;PageDisplay&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Welcome_Page action : PageDisplay  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Welcome_Page_PageDisplay_End[PageDisplay-End-Welcome_Page]</td>
+          <td class="col-duration">35.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Activation.Test_Check_System_Activation_Hive_Result object at 0x0000026E36D03730&gt;<br/>action = &#x27;PageDisplay&#x27;, event = &#x27;End&#x27;, page = &#x27;Welcome_Page&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.Welcome_Page[&quot;Welcome_Page&quot;][1].keys())[0], \<br/>         list(set.Welcome_Page[&quot;Welcome_Page&quot;][1].values())[0], list(set.Welcome_Page.keys())[0])])<br/>    def test_Welcome_Page_PageDisplay_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Activation.py:370: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;PageDisplay&#x27;, event = &#x27;End&#x27;, page = &#x27;Welcome_Page&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Activation.py:97: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Welcome_Page&#x27; and action=&#x27;PageDisplay&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Welcome_Page action : PageDisplay  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Disclaimer_Page_Click[Disclaimer_Page_Click-Click-Welcome_Page]</td>
+          <td class="col-duration">36.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Activation.Test_Check_System_Activation_Hive_Result object at 0x0000026E36C77EE0&gt;<br/>action = &#x27;Disclaimer_Page_Click&#x27;, event = &#x27;Click&#x27;, page = &#x27;Welcome_Page&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;, [<br/>        (list(set.Welcome_Page[&quot;Welcome_Page&quot;][2].keys())[0], \<br/>         list(set.Welcome_Page[&quot;Welcome_Page&quot;][2].values())[0], list(set.Welcome_Page.keys())[0])])<br/>    def test_Disclaimer_Page_Click(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Activation.py:376: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Disclaimer_Page_Click&#x27;, event = &#x27;Click&#x27;, page = &#x27;Welcome_Page&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Activation.py:97: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Welcome_Page&#x27; and action=&#x27;Disclaimer_Page_Click&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Welcome_Page action : Disclaimer_Page_Click  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 2<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Activate_Page::test_PageDisplay_Start[2-PageDisplay-Start-Activate_Page]</td>
+          <td class="col-duration">76.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test PageDisplay_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:PageDisplay
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:303
+=====&gt; System Activation has showed 
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:306
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Activate_Page::test_PageDisplay_End[2-PageDisplay-End-Activate_Page]</td>
+          <td class="col-duration">92.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test PageDisplay_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:PageDisplay
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:314
+=====&gt; Enter settings page 
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:317
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : /system/bin/sh: cat: /sdcard/Android/data/com.wm.tracker/files/temp/*: No such file or directory0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Activate_Page::test_Get_Download_QR_Code_Click[2-Get_Download_QR_Code_Click-Click-Activate_Page]</td>
+          <td class="col-duration">90.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test Get_Download_QR_Code_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:Get_Download_QR_Code_Click
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Get_Download_QR_Code_Click Line:332
+=====&gt; Enter settings page 
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Get_Download_QR_Code_Click Line:335
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Activate_Page::test_Activate_Click[2-Activate_Click-Click-Activate_Page]</td>
+          <td class="col-duration">92.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test Activate_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:Activate_Click
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Activate_Click Line:347
+=====&gt; Enter settings page 
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Activate_Click Line:350
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Activate_Page::test_Close_QR_Code_Click[2-Close_QR_Code_Click-Click-Activate_Page]</td>
+          <td class="col-duration">103.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:122
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:125
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:136
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:140
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:148
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test Close_QR_Code_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:Close_QR_Code_Click
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Close_QR_Code_Click Line:360
+=====&gt; Enter settings page 
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ReadTimeoutError(&quot;HTTPConnectionPool(host=&#x27;127.0.0.1&#x27;, port=61710): Read timed out. (read timeout=2)&quot;)&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Close_QR_Code_Click Line:363
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Welcome_Page::test_PageDisplay_Start[2-PageDisplay-Start-Welcome_Page]</td>
+          <td class="col-duration">98.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test PageDisplay_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:PageDisplay
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:380
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:383
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Welcome_Page::test_PageDisplay_End[2-PageDisplay-End-Welcome_Page]</td>
+          <td class="col-duration">98.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test PageDisplay_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:PageDisplay
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:394
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:397
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Welcome_Page::test_Disclaimer_Page_Click[2-Disclaimer_Page_Click-Click-Welcome_Page]</td>
+          <td class="col-duration">103.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test Disclaimer_Page_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:Disclaimer_Page_Click
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Page_Click Line:412
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Page_Click Line:415
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Welcome_Page::test_Disclaimer_Agree_Select[2-Disclaimer_Agree_Select-Set-Welcome_Page]</td>
+          <td class="col-duration">98.39</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test Disclaimer_Agree_Select  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:Disclaimer_Agree_Select
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Agree_Select Line:429
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Disclaimer_Agree_Select Line:432
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Welcome_Page::test_Confirm_Click[2-Confirm_Click-Click-Welcome_Page]</td>
+          <td class="col-duration">103.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:192
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:195
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:206
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:211
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:219
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test Confirm_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:Confirm_Click
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Confirm_Click Line:446
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Confirm_Click Line:449
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Disclaimer_Page::test_PageDisplay_Start[2-PageDisplay-Start-Disclaimer_Page]</td>
+          <td class="col-duration">103.77</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:265
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:268
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:279
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:284
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:292
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test PageDisplay_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:PageDisplay
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:469
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ReadTimeoutError(&quot;HTTPConnectionPool(host=&#x27;127.0.0.1&#x27;, port=63037): Read timed out. (read timeout=2)&quot;)&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_Start Line:472
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Disclaimer_Page::test_PageDisplay_End[2-PageDisplay-End-Disclaimer_Page]</td>
+          <td class="col-duration">102.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:265
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:268
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:279
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:284
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:292
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test PageDisplay_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:PageDisplay
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:486
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ReadTimeoutError(&quot;HTTPConnectionPool(host=&#x27;127.0.0.1&#x27;, port=63776): Read timed out. (read timeout=2)&quot;)&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:PageDisplay_End Line:489
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:63776 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:63776 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 342
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:63776 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Disclaimer_Page::test_Back_Click[2-Back_Click-Click-Disclaimer_Page]</td>
+          <td class="col-duration">110.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:265
+=====&gt; start Test
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:268
+=====&gt; modify flag.json file 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:modify_json_file Line:69
+=====&gt; echo json str \{hu_disclatmer_flag:flase,hu_activate_flag:flase\} to /crypto/flag/flag.json
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:279
+=====&gt; delete tracker successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Common.py Function:reboot_device Line:1396
+=====&gt; reboot system...
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:80
+=====&gt; wait adb alive
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:wait_system_activation_page Line:92
+=====&gt; system activation has showed
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:284
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:message Line:292
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt;&gt; /update/buried_System_Activation.log &amp;&quot;<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Common Line:56
+=====&gt; start test Back_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:271
+=====&gt; check if Action:Back_Click
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Back_Click Line:505
+=====&gt; Disclaimer page show
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=0, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=2, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+WARNING  urllib3.connectionpool:connectionpool.py:744 Retrying (Retry(total=1, connect=3, read=None, redirect=None, status=None)) after connection broken by &#x27;ProtocolError(&#x27;Connection aborted.&#x27;, ConnectionAbortedError(10053, &#x27;你的主机中的软件中止了一个已建立的连接。&#x27;, None, 10053, None))&#x27;: /version
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:Back_Click Line:508
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:63990 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:63990 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 342
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:63990 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Activation.py Function:warpper Line:283
+=====&gt; lvlog collect result value is : 0 
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:Save_TempData Line:49
+=====&gt; save data to /update/ directory<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Kill_Buried_Progress[1803011301990049]</td>
+          <td class="col-duration">7200.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:test_Kill_Buried_Progress Line:326
+=====&gt; kill logcat collect log progress<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Get_Download_QR_Code_Click[Get_Download_QR_Code_Click-Click-Activate_Page]</td>
+          <td class="col-duration">52.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Activate_Page&#x27; and action=&#x27;Get_Download_QR_Code_Click&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Activate_Page action : Get_Download_QR_Code_Click  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Disclaimer_Agree_Select[Disclaimer_Agree_Select-Set-Welcome_Page]</td>
+          <td class="col-duration">34.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Welcome_Page&#x27; and action=&#x27;Disclaimer_Agree_Select&#x27; and event=&#x27;Set&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Welcome_Page action : Disclaimer_Agree_Select  event: Set times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Activation.py::Test_Check_System_Activation_Hive_Result::test_Confirm_Click[Confirm_Click-Click-Welcome_Page]</td>
+          <td class="col-duration">35.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:82
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Welcome_Page&#x27; and action=&#x27;Confirm_Click&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_hive_data Line:89
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:71
+=====&gt; start collect pagename : Welcome_Page action : Confirm_Click  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Activation.py Function:total_local_data Line:76
+=====&gt; local data is : 0<br/></div></td></tr></tbody></table></body></html>

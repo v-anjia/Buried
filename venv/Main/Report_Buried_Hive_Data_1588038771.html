@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var collapsed = get_query_parameter('collapsed') || 'Passed';
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (extras.classList.contains("collapsed")) {
+            expandcollapse.classList.add("expander")
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function get_query_parameter(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    sort_column(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+
+        if (key_a == key_b) return 0;
+
+        if (reversed) {
+            return (key_a < key_b ? 1 : -1);
+        } else {
+            return (key_a > key_b ? 1 : -1);
+        }
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>Report_Buried_Hive_Data_1588038771.html</h1>
+    <p>Report generated on 28-Apr-2020 at 12:21:42 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Company</td>
+        <td>WM MOTOR</td></tr>
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>C:\Program Files\Java\jdk1.8.0_201</td></tr>
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.8.1", "pytest": "5.4.1"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.18362-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"html": "2.1.1", "metadata": "1.8.0", "repeat": "0.8.0", "report": "0.2.1"}</td></tr>
+      <tr>
+        <td>Project</td>
+        <td>Buried Point Auto</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.8.2</td></tr>
+      <tr>
+        <td>Tester</td>
+        <td>Antony WeiJiang</td></tr></table>
+    <h2>Summary</h2>
+    <p>50 tests ran in 8930.75 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">32 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">18 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Foreground_End[Foreground-End-Home]</td>
+          <td class="col-duration">42.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641315FD0&gt;<br/>action = &#x27;Foreground&#x27;, event = &#x27;End&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][1].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][1].values())[0], list(set.Home.keys())[0])])<br/>    def test_Foreground_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:394: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Foreground&#x27;, event = &#x27;End&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Foreground&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Foreground  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Home_Start[Home-Start-Home]</td>
+          <td class="col-duration">31.82</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x00000206413048E0&gt;<br/>action = &#x27;Home&#x27;, event = &#x27;Start&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][2].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][2].values())[0], list(set.Home.keys())[0])])<br/>    def test_Home_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:400: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Home&#x27;, event = &#x27;Start&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Home&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Home  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 10<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Home_startResult[Home_startResult-Click-Home]</td>
+          <td class="col-duration">29.92</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641359E50&gt;<br/>action = &#x27;Home_startResult&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][4].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][4].values())[0], list(set.Home.keys())[0])])<br/>    def test_Home_startResult(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:406: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Home_startResult&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Home_startResult&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 4
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Home_startResult  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 27<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Home_Result[Home_Result-Click-Home]</td>
+          <td class="col-duration">30.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641359BB0&gt;<br/>action = &#x27;Home_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][5].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][5].values())[0], list(set.Home.keys())[0])])<br/>    def test_Home_Result(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:412: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Home_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Home_Result&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 4
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Home_Result  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 27<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_Click[Check-Click-Home]</td>
+          <td class="col-duration">28.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x000002064134A2B0&gt;<br/>action = &#x27;Check&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][6].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][6].values())[0], list(set.Home.keys())[0])])<br/>    def test_Check_Click(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:418: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Check&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 14<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_Start[Check-Start-Home]</td>
+          <td class="col-duration">29.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641580CD0&gt;<br/>action = &#x27;Check&#x27;, event = &#x27;Start&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][7].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][7].values())[0], list(set.Home.keys())[0])])<br/>    def test_Check_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:424: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Check&#x27;, event = &#x27;Start&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 8<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_End[Check-End-Home]</td>
+          <td class="col-duration">30.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x000002064144E820&gt;<br/>action = &#x27;Check&#x27;, event = &#x27;End&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][8].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][8].values())[0], list(set.Home.keys())[0])])<br/>    def test_Check_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:430: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Check&#x27;, event = &#x27;End&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 6<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_Result[Check_Result-Click-Home]</td>
+          <td class="col-duration">30.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641504610&gt;<br/>action = &#x27;Check_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][9].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][9].values())[0], list(set.Home.keys())[0])])<br/>    def test_Check_Result(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:436: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Check_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check_Result&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check_Result  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_Report_Click[Check_Report-Click-Home]</td>
+          <td class="col-duration">28.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641504C70&gt;<br/>action = &#x27;Check_Report&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][10].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][10].values())[0], list(set.Home.keys())[0])])<br/>    def test_Check_Report_Click(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:442: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Check_Report&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check_Report&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check_Report  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 6<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_Report_Start[Check_Report-Start-Home]</td>
+          <td class="col-duration">31.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641504A30&gt;<br/>action = &#x27;Check_Report&#x27;, event = &#x27;Start&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][11].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][11].values())[0], list(set.Home.keys())[0])])<br/>    def test_Check_Report_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:448: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Check_Report&#x27;, event = &#x27;Start&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check_Report&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check_Report  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_History[History-Click-Home]</td>
+          <td class="col-duration">28.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x000002064145C2B0&gt;<br/>action = &#x27;History&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][14].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][14].values())[0], list(set.Home.keys())[0])])<br/>    def test_History(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:466: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;History&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;History&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : History  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Remind[Remind-Click-Home]</td>
+          <td class="col-duration">29.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x000002064145C310&gt;<br/>action = &#x27;Remind&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Home[&quot;Home&quot;][15].keys())[0], \<br/>                               list(set.Home[&quot;Home&quot;][15].values())[0], list(set.Home.keys())[0])])<br/>    def test_Remind(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:472: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Remind&#x27;, event = &#x27;Click&#x27;, page = &#x27;Home&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Remind&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Remind  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_History_Start[History-Start-History]</td>
+          <td class="col-duration">28.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641461970&gt;<br/>action = &#x27;History&#x27;, event = &#x27;Start&#x27;, page = &#x27;History&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.History[&quot;History&quot;][0].keys())[0], \<br/>                               list(set.History[&quot;History&quot;][0].values())[0], list(set.History.keys())[0])])<br/>    def test_History_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:478: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;History&#x27;, event = &#x27;Start&#x27;, page = &#x27;History&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;History&#x27; and action=&#x27;History&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : History action : History  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_History_End[History-End-History]</td>
+          <td class="col-duration">29.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x00000206414616D0&gt;<br/>action = &#x27;History&#x27;, event = &#x27;End&#x27;, page = &#x27;History&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.History[&quot;History&quot;][1].keys())[0], \<br/>                               list(set.History[&quot;History&quot;][1].values())[0], list(set.History.keys())[0])])<br/>    def test_History_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:484: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;History&#x27;, event = &#x27;End&#x27;, page = &#x27;History&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;History&#x27; and action=&#x27;History&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : History action : History  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_History_Result[History_Result-Click-History]</td>
+          <td class="col-duration">28.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x0000020641566A00&gt;<br/>action = &#x27;History_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;History&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.History[&quot;History&quot;][2].keys())[0], \<br/>                               list(set.History[&quot;History&quot;][2].values())[0], list(set.History.keys())[0])])<br/>    def test_History_Result(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:490: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;History_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;History&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;History&#x27; and action=&#x27;History_Result&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : History action : History_Result  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 8<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Remind_Start[Remind-Start-Remind]</td>
+          <td class="col-duration">39.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x000002064143DD30&gt;<br/>action = &#x27;Remind&#x27;, event = &#x27;Start&#x27;, page = &#x27;Remind&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Remind[&quot;Remind&quot;][0].keys())[0], \<br/>                               list(set.Remind[&quot;Remind&quot;][0].values())[0], list(set.Remind.keys())[0])])<br/>    def test_Remind_Start(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:496: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Remind&#x27;, event = &#x27;Start&#x27;, page = &#x27;Remind&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Remind&#x27; and action=&#x27;Remind&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Remind action : Remind  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 4<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Remind_End[Remind-End-Remind]</td>
+          <td class="col-duration">27.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x000002064143D550&gt;<br/>action = &#x27;Remind&#x27;, event = &#x27;End&#x27;, page = &#x27;Remind&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Remind[&quot;Remind&quot;][1].keys())[0], \<br/>                               list(set.Remind[&quot;Remind&quot;][1].values())[0], list(set.Remind.keys())[0])])<br/>    def test_Remind_End(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:502: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Remind&#x27;, event = &#x27;End&#x27;, page = &#x27;Remind&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Remind&#x27; and action=&#x27;Remind&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Remind action : Remind  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Remind_Result[Remind_Result-Click-Remind]</td>
+          <td class="col-duration">28.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_Vehicles_Repair.Test_Check_Vehicles_Repair_Hive_Result object at 0x000002064143D5B0&gt;<br/>action = &#x27;Remind_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;Remind&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Remind[&quot;Remind&quot;][2].keys())[0], \<br/>                               list(set.Remind[&quot;Remind&quot;][2].values())[0], list(set.Remind.keys())[0])])<br/>    def test_Remind_Result(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:508: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;Remind_Result&#x27;, event = &#x27;Click&#x27;, page = &#x27;Remind&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_Vehicles_Repair.py:83: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Remind&#x27; and action=&#x27;Remind_Result&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Remind action : Remind_Result  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 8<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Collect_Buried_Log::test_collect_buired_result[1803011301990049]</td>
+          <td class="col-duration">15.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_collect_buired_result Line:92
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_collect_buired_result Line:100
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt; /update/buried_Repair.log &amp;&quot;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Foreground_Start[2-Foreground-Start-Home]</td>
+          <td class="col-duration">17.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Foreground_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Foreground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:305
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_Start Line:308
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Foreground_End[2-Foreground-End-Home]</td>
+          <td class="col-duration">28.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Foreground_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Foreground
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:323
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Foreground_End Line:326
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Home_Start[2-Home-Start-Home]</td>
+          <td class="col-duration">21.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Home_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Home
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:345
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Start Line:348
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Home_startResult[2-Home_startResult-Click-Home]</td>
+          <td class="col-duration">26.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Home_startResult  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Home_startResult
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:387
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_startResult Line:390
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 87
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Home_Result[2-Home_Result-Click-Home]</td>
+          <td class="col-duration">22.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Home_Result  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Home_Result
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:406
+=====&gt; vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Home_Result Line:409
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_Click[2-Check-Click-Home]</td>
+          <td class="col-duration">33.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:426
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Click Line:429
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_Start[2-Check-Start-Home]</td>
+          <td class="col-duration">34.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Start Line:447
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Start Line:450
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_End[2-Check-End-Home]</td>
+          <td class="col-duration">41.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_End Line:469
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_End Line:472
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_Result[2-Check_Result-Click-Home]</td>
+          <td class="col-duration">40.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_Result  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check_Result
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Result Line:491
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Result Line:494
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_Report_Click[2-Check_Report-Click-Home]</td>
+          <td class="col-duration">30.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_Report_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check_Report
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Click Line:513
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Click Line:516
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_Report_Start[2-Check_Report-Start-Home]</td>
+          <td class="col-duration">35.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_Report_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check_Report
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Start Line:535
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Start Line:538
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_Report_Hide[2-Check_Report_Hide-Click-Home]</td>
+          <td class="col-duration">39.60</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_Report_Hide  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check_Report_Hide
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Hide Line:557
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_Hide Line:560
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Check_Report_End[2-Check_Report-End-Home]</td>
+          <td class="col-duration">42.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Check_Report_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Check_Report
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_End Line:581
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Check_Report_End Line:584
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_History[2-History-Click-Home]</td>
+          <td class="col-duration">30.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test History  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:History
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History Line:604
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History Line:607
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Home::test_Remind[2-Remind-Click-Home]</td>
+          <td class="col-duration">28.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:112
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:124
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Remind  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Remind
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind Line:625
+=====&gt; System Activation has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind Line:628
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_History::test_History_Start[2-History-Start-History]</td>
+          <td class="col-duration">27.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:229
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:241
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test History_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:History
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Start Line:650
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Start Line:653
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_History::test_History_End[2-History-End-History]</td>
+          <td class="col-duration">34.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:229
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:241
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test History_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:History
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_End Line:670
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_End Line:673
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_History::test_History_Result[2-History_Result-Click-History]</td>
+          <td class="col-duration">27.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:229
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:241
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test History_Result  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:History_Result
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Result Line:692
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:History_Result Line:695
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1510
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Remind::test_Remind_Start[2-Remind-Start-Remind]</td>
+          <td class="col-duration">23.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:288
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Remind_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Remind
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Start Line:717
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Start Line:720
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Remind::test_Remind_End[2-Remind-End-Remind]</td>
+          <td class="col-duration">26.89</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:288
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Remind_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Remind
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_End Line:737
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_End Line:740
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Remind::test_Remind_Result[2-Remind_Result-Click-Remind]</td>
+          <td class="col-duration">26.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:276
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:288
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Remind_Result  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Remind_Result
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Result Line:760
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Remind_Result Line:763
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Widget_maintain::test_Widget_maintain_Click[2-Widget_maintain-Click-Widget_maintain]</td>
+          <td class="col-duration">24.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:325
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:337
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Widget_maintain_Click  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Widget_maintain
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Click Line:787
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Click Line:790
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+ERROR    root:logger.py:183 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:289
+=====&gt; -32002 Client error: &lt;&gt; data: , method: None<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Widget_maintain::test_Widget_maintain_Start[2-Widget_maintain-Start-Widget_maintain]</td>
+          <td class="col-duration">36.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:325
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:337
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Widget_maintain_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Widget_maintain
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Start Line:801
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_Start Line:804
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 300
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 299
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Widget_maintain::test_Widget_maintain_End[2-Widget_maintain-End-Widget_maintain]</td>
+          <td class="col-duration">44.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:325
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:kill_vehicles_repair_progress Line:92
+=====&gt; kill vehicles repair
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:157
+=====&gt; Result value is : 0
+
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:delete_tracker_log Line:162
+=====&gt; delete tracker log successfully
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:message Line:337
+=====&gt; delete tracker successfully<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:Common Line:45
+=====&gt; start test Widget_maintain_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:272
+=====&gt; check if Action:Widget_maintain
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_End Line:827
+=====&gt; Vehicles Repair has showed 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:Widget_maintain_End Line:830
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13222HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 87
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 299
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 300
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:51235 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\Vehicles_Repair.py Function:warpper Line:284
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Kill_Buried_Progress[1803011301990049]</td>
+          <td class="col-duration">7200.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:test_Kill_Buried_Progress Line:380
+=====&gt; kill logcat collect log progress<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Foreground_Start[Foreground-Start-Home]</td>
+          <td class="col-duration">44.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Foreground&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Foreground  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_Report_Hide[Check_Report_Hide-Click-Home]</td>
+          <td class="col-duration">30.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check_Report_Hide&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check_Report_Hide  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 2<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Check_Report_End[Check_Report-End-Home]</td>
+          <td class="col-duration">28.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Home&#x27; and action=&#x27;Check_Report&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Home action : Check_Report  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 2<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Widget_maintain_Click[Widget_maintain-Click-Widget_maintain]</td>
+          <td class="col-duration">27.57</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget_maintain&#x27; and action=&#x27;Widget_maintain&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Widget_maintain action : Widget_maintain  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Widget_maintain_Start[Widget_maintain-Start-Widget_maintain]</td>
+          <td class="col-duration">30.88</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget_maintain&#x27; and action=&#x27;Widget_maintain&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Widget_maintain action : Widget_maintain  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_Vehicles_Repair.py::Test_Check_Vehicles_Repair_Hive_Result::test_Widget_maintain_End[Widget_maintain-End-Widget_maintain]</td>
+          <td class="col-duration">28.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:68
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-28&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget_maintain&#x27; and action=&#x27;Widget_maintain&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_hive_data Line:75
+=====&gt; hive data is : 0
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:57
+=====&gt; start collect pagename : Widget_maintain action : Widget_maintain  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Vehicles_Repair.py Function:total_local_data Line:62
+=====&gt; local data is : 0<br/></div></td></tr></tbody></table></body></html>

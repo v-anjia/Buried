@@ -1,0 +1,82 @@
+Wed,15 Apr 2020 09:28:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:88
+=====> setting root partition read and write
+Wed,15 Apr 2020 09:28:08 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:96
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried.log &"
+Wed,15 Apr 2020 09:28:11 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Kill_Buried_Progress Line:286
+=====> kill logcat collect log progress
+Wed,15 Apr 2020 09:28:12 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:28:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:28:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:54
+=====> start collect pagename : Default action : startMap  event: Click times
+Wed,15 Apr 2020 09:28:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:28:35 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:38:31 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:88
+=====> setting root partition read and write
+Wed,15 Apr 2020 09:38:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:96
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried.log &"
+Wed,15 Apr 2020 09:38:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Kill_Buried_Progress Line:286
+=====> kill logcat collect log progress
+Wed,15 Apr 2020 09:38:42 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:39:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:39:04 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:54
+=====> start collect pagename : Default action : startMap  event: Click times
+Wed,15 Apr 2020 09:39:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:39:05 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:39:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:39:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:54
+=====> start collect pagename : Default action : startEnergy  event: Click times
+Wed,15 Apr 2020 09:39:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:39:28 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:45:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:88
+=====> setting root partition read and write
+Wed,15 Apr 2020 09:45:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:96
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried.log &"
+Wed,15 Apr 2020 09:45:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Kill_Buried_Progress Line:286
+=====> kill logcat collect log progress
+Wed,15 Apr 2020 09:45:50 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:45:54 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:45:57 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:46:00 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:46:37 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:88
+=====> setting root partition read and write
+Wed,15 Apr 2020 09:46:47 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:96
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried.log &"
+Wed,15 Apr 2020 09:46:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Kill_Buried_Progress Line:286
+=====> kill logcat collect log progress
+Wed,15 Apr 2020 09:46:52 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:49:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:50:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 0
+Wed,15 Apr 2020 09:50:13 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:54
+=====> start collect pagename : Default action : startMap  event: Click times
+Wed,15 Apr 2020 09:50:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:50:14 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:56:03 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data
+Wed,15 Apr 2020 09:56:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:72
+=====> hive data is : 3
+Wed,15 Apr 2020 09:56:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:54
+=====> start collect pagename : Default action : startMap  event: Click times
+Wed,15 Apr 2020 09:56:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:59
+=====> local data is : 0
+Wed,15 Apr 2020 09:56:38 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:65
+=====> start collect hive data

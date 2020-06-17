@@ -1,0 +1,1750 @@
+Fri,17 Apr 2020 10:27:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:27:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:27:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PageDisplay_Start Line:317
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:27:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:27:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:27:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:27:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:27:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:27:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PageDisplay_End Line:336
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:27:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:28:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:28:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:28:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:28:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:28:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:OpenApp Line:356
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:28:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:28:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:28:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:28:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:28:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:28:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:28:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_10KM Line:379
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:28:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:28:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:28:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:28:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:28:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:29:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:29:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_25KM Line:393
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:29:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:29:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:29:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:29:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:29:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:29:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:29:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_50KM Line:407
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:29:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:29:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:29:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:29:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:29:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:29:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:29:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:MileageSwitch_100KM Line:421
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:29:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:29:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:29:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:29:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:29:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:30:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:30:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyEfficiency Line:436
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:30:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:30:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:30:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:30:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:30:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:30:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:30:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:30:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeSwitch Line:450
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:30:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:30:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:30:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:30:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:30:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:30:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:SpeedSwitch Line:462
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:30:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:30:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:30:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:30:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:30:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:30:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:VoiceReport Line:474
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:31:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:31:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:31:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:31:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:31:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:31:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:BatteryInfoForeground_Start Line:489
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:31:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:31:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:31:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:31:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:31:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:31:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:31:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:31:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:BatteryInfoForeground_End Line:504
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:31:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:31:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:31:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:31:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:32:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:32:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoBatteryInfo Line:518
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:32:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:32:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:32:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:32:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:32:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:32:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:32:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:32:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Week Line:537
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:32:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:32:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:32:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:32:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:32:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:32:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:32:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Month Line:557
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:32:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:32:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:32:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:32:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:32:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:33:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:33:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PeriodSwitch_Year Line:574
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:33:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:33:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:33:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:33:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:33:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:33:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:33:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeForeground_Start Line:590
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:33:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:33:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:33:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:33:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:33:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:33:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:33:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:PowerConsumeForeground_End Line:604
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:33:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:33:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:33:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:33:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:33:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:34:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:34:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoPowerConsume Line:620
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:34:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:34:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:34:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:34:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:34:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:34:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:34:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyForeground_Start Line:639
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:34:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:34:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:34:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:34:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:34:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:34:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:34:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyForeground_End Line:653
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:34:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:34:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:34:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:34:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:34:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:34:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:34:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:IntoHistoricalJourney Line:669
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:34:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:35:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:35:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:35:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:35:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:start_energy_management Line:106
+=====> start energy management
+Fri,17 Apr 2020 10:35:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:35:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:HistoricalJourneyList Line:683
+=====> {'currentPackageName': 'com.yftech.vehiclecenter', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:35:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:35:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:warpper Line:294
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 10:35:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:kill_energy_management_progress Line:95
+=====> kill energy management
+Fri,17 Apr 2020 10:35:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:35:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EconomyModeAdviseAppare Line:703
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:35:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:35:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyRecoveryAppare Line:726
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:35:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:35:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:ACOffAdviseAppare Line:749
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:35:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:35:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EconomyModeAdvise Line:772
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:35:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:36:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:EnergyRecovery Line:799
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 10:36:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:delete_tracker_log Line:168
+=====> Result value is : 0
+Fri,17 Apr 2020 10:36:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Energy_Management.py Function:ACOffAdvise Line:825
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 12:36:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 7
+Fri,17 Apr 2020 12:36:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 27
+Fri,17 Apr 2020 12:37:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:37:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 12:38:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:38:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:38:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:38:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:39:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:39:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:39:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:39:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:40:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Fri,17 Apr 2020 12:40:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 27
+Fri,17 Apr 2020 12:41:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:41:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:41:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:41:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:42:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:42:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:43:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Fri,17 Apr 2020 12:43:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 27
+Fri,17 Apr 2020 12:43:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:43:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 14
+Fri,17 Apr 2020 12:44:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Fri,17 Apr 2020 12:44:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 27
+Fri,17 Apr 2020 12:44:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:44:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:45:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:45:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 12:45:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:45:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:46:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:46:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 6
+Fri,17 Apr 2020 12:47:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:47:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:47:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:47:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 6
+Fri,17 Apr 2020 12:48:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:48:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 12:48:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:48:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 12:49:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:49:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 12:49:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:49:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 12:50:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:50:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 12:50:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:50:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 12:51:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:51:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 12:51:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:51:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 12:52:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 12:52:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Energy_Management.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 16:13:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:13:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenApp Line:705
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:13:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:13:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:14:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Foreground_Start Line:724
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:14:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:14:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:14:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Foreground_End Line:743
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:14:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:14:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:14:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:756
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:15:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:15:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:15:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:774
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:15:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:15:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:15:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:793
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:16:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:16:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:16:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Open_WIFI Line:811
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:16:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:16:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:16:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenBluetooth Line:824
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:16:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:16:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:16:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:WirelessCharging Line:838
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:16:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:16:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:17:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PrivacyMode Line:852
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:17:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:17:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:17:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickUser Line:867
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:17:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:17:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:17:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickBluetooth Line:884
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:18:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:18:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:18:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickWIFI Line:900
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:18:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:18:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:18:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickPrivacy Line:916
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:18:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:18:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:19:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVoice Line:932
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:19:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:19:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:19:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVolume Line:948
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:19:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:19:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:19:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickCurrency Line:964
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:19:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:19:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:20:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickSystem Line:980
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:20:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:20:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:20:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:20:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1468
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:20:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:20:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:20:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:20:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PrivacModeSwitch Line:1483
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:21:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:21:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:21:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:21:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:MapSwitch Line:1496
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:21:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:21:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:21:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:22:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CallSwitch Line:1517
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:22:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:22:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:22:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:22:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:DVRSwitch Line:1536
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:22:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:22:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:22:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:22:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VideoSwitch Line:1555
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:22:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:23:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:23:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:23:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:WeChat Line:1574
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:23:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:23:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:23:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:23:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CarHomeSwitch Line:1593
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:23:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:23:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:24:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:24:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VehicleSettingSwitch Line:1613
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:24:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:24:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:24:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:24:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:SetClick Line:1639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:24:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:25:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:25:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:25:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1664
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:25:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:25:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_privacy Line:443
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:25:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:25:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1679
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:25:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:25:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:26:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:26:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1000
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:26:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:26:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:26:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:26:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenBluetoothSwitch Line:1018
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:26:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:26:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:26:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:26:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VehicleName Line:1033
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:27:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:27:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:27:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:27:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConnectBluetooth Line:1047
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:27:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : /system/bin/sh: cat: /sdcard/Android/data/com.wm.tracker/files/temp/*: No such file or directory0 
+Fri,17 Apr 2020 16:27:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:27:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:27:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:BreakBluetooth Line:1069
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:27:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:28:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:28:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:28:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickdeleteBluetooth Line:1091
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:28:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:28:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:28:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:28:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1119
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:28:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:28:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:29:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:29:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1131
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:29:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:29:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:29:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_blue_dialog Line:596
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:29:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:29:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1150
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:29:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:29:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:29:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_blue_dialog Line:596
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:30:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:30:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickCancel Line:1178
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:30:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:30:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_bluetooth Line:413
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:30:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_blue_dialog Line:596
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:30:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:30:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1191
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:30:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:30:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:30:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:30:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1213
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:31:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:31:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:31:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:31:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1227
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:31:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:31:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:31:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:31:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1239
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:31:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:31:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:31:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:31:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickIgnoreWIFI Line:1251
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:32:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : /system/bin/sh: cat: /sdcard/Android/data/com.wm.tracker/files/temp/*: No such file or directory0 
+Fri,17 Apr 2020 16:32:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:32:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:32:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenWIFISwitch Line:1265
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:32:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:32:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:32:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:32:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConnectWIFI Line:1278
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:33:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:33:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:33:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:33:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:33:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1297
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:33:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:33:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:33:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:33:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:34:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CancelDialog Line:1333
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:34:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:34:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:34:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:34:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1345
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:34:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:34:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:34:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_dialog Line:623
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:35:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:35:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:RemoveWIFI Line:1312
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:35:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:35:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:35:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:35:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1378
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:36:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:36:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:36:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:36:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:36:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickConnectWIFI Line:1396
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:36:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:36:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:37:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:37:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:37:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickEliminate Line:1411
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:37:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:37:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:37:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:37:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:37:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1428
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:38:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:38:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi Line:428
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:38:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_wifi_weditor_page Line:639
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:38:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:38:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1446
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:38:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:38:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:39:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:39:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickVoiceSwitch Line:1711
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:39:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:39:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:39:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:39:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:HelpDocument Line:1725
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:39:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:39:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:39:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:39:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1742
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:39:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:40:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:40:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:40:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1754
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:40:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:40:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:40:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:40:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:40:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1770
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:40:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:40:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:41:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:41:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:41:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VoiceSwitch Line:1784
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:41:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:41:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:41:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:41:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:41:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1798
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:41:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:41:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:42:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:42:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:42:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickClose Line:1813
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:42:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:42:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice Line:458
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:42:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_voice_person_page Line:580
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:42:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:42:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1827
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:42:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:42:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:43:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:43:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:1845
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:43:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:43:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:43:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:43:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickSwitch Line:1859
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:43:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:43:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:43:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:43:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:MediaVolume Line:1872
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:43:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:44:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:44:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:44:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ConversationVolume Line:1888
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:44:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:44:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:44:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:44:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:NavigationVolume Line:1904
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:44:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:44:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:45:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:45:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:VoiceVolume Line:1921
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:45:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:45:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:45:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:45:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickEqualizer Line:1938
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:45:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:46:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:46:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:46:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickSoundField Line:1956
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:46:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:46:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:46:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:46:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:1973
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:46:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:47:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:47:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:47:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:1989
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:47:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:47:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:47:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:47:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:47:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2008
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:48:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:48:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:48:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:48:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:48:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:EqualizerSwitch Line:2024
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:48:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:48:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:48:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:49:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:49:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:SwitchEqualizer Line:2039
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:49:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:49:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:49:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:49:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:49:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ60HZ Line:2089
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:50:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:50:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:50:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:50:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:50:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ125HZ Line:2113
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:51:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:51:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:51:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:51:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:51:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ315HZ Line:2136
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:51:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:52:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:52:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:52:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:52:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ800HZ Line:2159
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:53:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:53:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:53:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:53:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:53:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ2KHZ Line:2182
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:53:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:54:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:54:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:54:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:54:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ5KHZ Line:2205
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:54:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:54:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:54:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumeequilizer Line:542
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:55:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:55:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:AdjustEQ12_5KHZ Line:2229
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:55:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:55:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:56:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumebalance Line:561
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:56:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:56:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2272
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:56:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:56:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:56:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumebalance Line:561
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:56:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:56:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2288
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:57:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:57:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_sound Line:473
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:57:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_volumebalance Line:561
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:57:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:57:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2304
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:57:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:57:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:57:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:57:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2323
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:58:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:58:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:58:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:58:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:TimeFormat Line:2339
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:58:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:58:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:58:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:58:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2354
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:59:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:59:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.wm.launcher', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:59:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 16:59:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2370
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:59:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 16:59:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 16:59:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:00:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:00:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2389
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:00:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:00:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:00:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:00:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:00:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:SwitchTimeFormat Line:2404
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:00:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:00:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:01:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:01:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:01:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickClose Line:2419
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:01:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:01:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:01:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:02:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:02:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2435
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:02:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:02:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_general Line:489
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:02:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_timeformate Line:526
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:02:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:02:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2450
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:02:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:02:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:03:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:03:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_Start Line:2468
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:03:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:03:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:03:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:03:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:FunctionDemo Line:2483
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:03:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:03:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:04:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:04:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickStorage Line:2500
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:04:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:04:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:04:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:04:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickTBox Line:2517
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:05:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:05:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:05:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:05:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:ClickInformation Line:2537
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:05:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:05:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:06:02 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:06:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:CilckRecoverySystem Line:2557
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:06:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:06:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.ivi.radio', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:06:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:06:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:Back Line:2576
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:06:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 17:06:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_system Line:507
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:07:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:268
+=====> Result value is : 0
+Fri,17 Apr 2020 17:07:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:PageDisplay_End Line:2591
+=====> {'currentPackageName': 'com.android.settings', 'displayHeight': 1680, 'displayRotation': 3, 'displaySizeDpX': 1080, 'displaySizeDpY': 1920, 'displayWidth': 1080, 'productName': 'ASE13201HD', 'screenOn': True, 'sdkInt': 23, 'naturalOrientation': False}
+Fri,17 Apr 2020 17:07:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:682
+=====> lvlog collect result value is : 0 
+Fri,17 Apr 2020 19:08:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 16
+Fri,17 Apr 2020 19:08:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 8
+Fri,17 Apr 2020 19:08:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 7
+Fri,17 Apr 2020 19:08:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 8
+Fri,17 Apr 2020 19:09:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 8
+Fri,17 Apr 2020 19:09:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 11
+Fri,17 Apr 2020 19:09:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:09:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:10:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:10:07 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:10:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:10:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:10:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:10:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:11:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:11:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:11:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:11:50 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:12:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:12:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:12:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:12:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:13:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:13:16 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:13:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:13:41 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:14:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:14:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:14:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:14:30 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:14:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:14:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:15:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:15:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:15:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:15:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:16:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:16:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 16
+Fri,17 Apr 2020 19:17:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:17:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:17:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:17:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:18:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:18:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:18:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:18:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:19:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:19:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:19:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:19:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:20:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:20:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:20:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:20:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:21:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:21:29 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:22:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:22:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:22:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:22:37 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 12
+Fri,17 Apr 2020 19:23:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:23:03 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:23:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:23:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:24:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:24:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:24:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:24:42 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:25:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:25:14 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 3
+Fri,17 Apr 2020 19:25:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:25:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 5
+Fri,17 Apr 2020 19:26:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:26:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 5
+Fri,17 Apr 2020 19:26:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:26:52 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:27:23 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:27:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:27:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:27:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:28:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:28:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 19
+Fri,17 Apr 2020 19:29:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:29:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 8
+Fri,17 Apr 2020 19:29:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:29:40 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 12
+Fri,17 Apr 2020 19:30:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:30:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:31:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:31:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:31:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:31:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 8
+Fri,17 Apr 2020 19:32:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:32:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:32:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:32:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:33:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:33:17 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:33:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:33:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:34:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:34:25 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:35:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:35:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:35:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:35:38 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:36:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:36:11 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:36:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:36:44 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:37:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:37:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 10
+Fri,17 Apr 2020 19:37:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:37:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:38:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:38:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 3
+Fri,17 Apr 2020 19:39:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:39:00 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:39:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:39:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 10
+Fri,17 Apr 2020 19:40:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:40:04 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:40:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:40:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:41:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:41:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:41:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:41:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 5
+Fri,17 Apr 2020 19:42:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:42:22 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 40
+Fri,17 Apr 2020 19:43:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:43:01 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:43:46 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:43:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:44:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:44:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:44:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:44:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:45:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:45:31 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:46:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:46:06 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 13
+Fri,17 Apr 2020 19:46:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:46:36 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 6
+Fri,17 Apr 2020 19:47:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:47:08 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:47:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:47:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 23
+Fri,17 Apr 2020 19:48:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:48:15 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 13
+Fri,17 Apr 2020 19:48:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:48:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 9
+Fri,17 Apr 2020 19:49:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:49:24 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 19:49:55 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:49:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:50:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:50:28 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:51:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:51:09 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:51:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:51:45 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:52:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:52:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:52:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:52:56 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:53:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:53:32 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:54:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:54:12 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 6
+Fri,17 Apr 2020 19:54:47 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:54:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 3
+Fri,17 Apr 2020 19:55:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:55:21 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 3
+Fri,17 Apr 2020 19:55:53 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:55:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 13
+Fri,17 Apr 2020 19:56:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:56:26 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 9
+Fri,17 Apr 2020 19:56:57 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:56:58 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:57:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:57:33 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 4
+Fri,17 Apr 2020 19:58:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:58:05 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 9
+Fri,17 Apr 2020 19:58:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:58:39 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 2
+Fri,17 Apr 2020 19:59:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:59:13 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 19:59:48 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 19:59:49 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 20:00:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 20:00:20 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 5
+Fri,17 Apr 2020 20:00:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Fri,17 Apr 2020 20:00:51 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 16
+Fri,17 Apr 2020 20:01:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 20:01:27 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 20:01:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 20:01:59 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 20:02:34 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 20:02:35 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 20:03:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 20:03:10 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 1
+Fri,17 Apr 2020 20:03:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 20:03:43 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 0
+Fri,17 Apr 2020 20:04:18 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 0
+Fri,17 Apr 2020 20:04:19 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 5
+Fri,17 Apr 2020 20:04:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_hive_data Line:75
+=====> hive data is : 1
+Fri,17 Apr 2020 20:04:54 [DEBUG] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:total_local_data Line:62
+=====> local data is : 9

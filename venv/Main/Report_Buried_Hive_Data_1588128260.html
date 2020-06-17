@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var collapsed = get_query_parameter('collapsed') || 'Passed';
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (extras.classList.contains("collapsed")) {
+            expandcollapse.classList.add("expander")
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function get_query_parameter(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    sort_column(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+
+        if (key_a == key_b) return 0;
+
+        if (reversed) {
+            return (key_a < key_b ? 1 : -1);
+        } else {
+            return (key_a > key_b ? 1 : -1);
+        }
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>Report_Buried_Hive_Data_1588128260.html</h1>
+    <p>Report generated on 29-Apr-2020 at 13:09:01 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Company</td>
+        <td>WM MOTOR</td></tr>
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>C:\Program Files\Java\jdk1.8.0_201</td></tr>
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.8.1", "pytest": "5.4.1"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.18362-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"html": "2.1.1", "metadata": "1.8.0", "repeat": "0.8.0", "report": "0.2.1"}</td></tr>
+      <tr>
+        <td>Project</td>
+        <td>Buried Point Auto</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.8.2</td></tr>
+      <tr>
+        <td>Tester</td>
+        <td>Antony WeiJiang</td></tr></table>
+    <h2>Summary</h2>
+    <p>46 tests ran in 8679.97 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">40 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">6 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startMap[startMap-Click-Default]</td>
+          <td class="col-duration">47.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Desktop.Test_Check_System_Desktop_Hive_Result object at 0x0000026D20276FD0&gt;<br/>action = &#x27;startMap&#x27;, event = &#x27;Click&#x27;, page = &#x27;Default&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Default[&quot;Default&quot;][0].keys())[0], \<br/>                               list(set.Default[&quot;Default&quot;][0].values())[0], &quot;Default&quot;)])<br/>    def test_startMap(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:296: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;startMap&#x27;, event = &#x27;Click&#x27;, page = &#x27;Default&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:81: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startMap&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 3
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startMap  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 2<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startSetting[startSetting-Click-Default]</td>
+          <td class="col-duration">29.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Desktop.Test_Check_System_Desktop_Hive_Result object at 0x0000026D2026FB50&gt;<br/>action = &#x27;startSetting&#x27;, event = &#x27;Click&#x27;, page = &#x27;Default&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Default[&quot;Default&quot;][6].keys())[0], \<br/>                               list(set.Default[&quot;Default&quot;][6].values())[0], &quot;Default&quot;)])<br/>    def test_startSetting(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:333: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;startSetting&#x27;, event = &#x27;Click&#x27;, page = &#x27;Default&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:81: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startSetting&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 4
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startSetting  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 2<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_showDefaultPage[showDefaultPage-Click-Widget]</td>
+          <td class="col-duration">31.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Desktop.Test_Check_System_Desktop_Hive_Result object at 0x0000026D2032AC40&gt;<br/>action = &#x27;showDefaultPage&#x27;, event = &#x27;Click&#x27;, page = &#x27;Widget&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Widget[&quot;Widget&quot;][1].keys())[0], \<br/>                               list(set.Widget[&quot;Widget&quot;][1].values())[0], list(set.Widget.keys())[0])])<br/>    def test_showDefaultPage(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:411: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;showDefaultPage&#x27;, event = &#x27;Click&#x27;, page = &#x27;Widget&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:81: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget&#x27; and action=&#x27;showDefaultPage&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 20
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Widget action : showDefaultPage  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 17<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_editingWidget_Start[editingWidget-Start-Widget]</td>
+          <td class="col-duration">29.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Desktop.Test_Check_System_Desktop_Hive_Result object at 0x0000026D2033EB80&gt;<br/>action = &#x27;editingWidget&#x27;, event = &#x27;Start&#x27;, page = &#x27;Widget&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Widget[&quot;Widget&quot;][2].keys())[0], \<br/>                               list(set.Widget[&quot;Widget&quot;][2].values())[0], list(set.Widget.keys())[0])])<br/>    def test_editingWidget_Start(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:417: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;editingWidget&#x27;, event = &#x27;Start&#x27;, page = &#x27;Widget&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:81: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget&#x27; and action=&#x27;editingWidget&#x27; and event=&#x27;Start&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 3
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Widget action : editingWidget  event: Start times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 5<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_editingWidget_End[editingWidget-End-Widget]</td>
+          <td class="col-duration">29.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Desktop.Test_Check_System_Desktop_Hive_Result object at 0x0000026D203422B0&gt;<br/>action = &#x27;editingWidget&#x27;, event = &#x27;End&#x27;, page = &#x27;Widget&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Widget[&quot;Widget&quot;][3].keys())[0], \<br/>                               list(set.Widget[&quot;Widget&quot;][3].values())[0], list(set.Widget.keys())[0])])<br/>    def test_editingWidget_End(self,action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:423: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;editingWidget&#x27;, event = &#x27;End&#x27;, page = &#x27;Widget&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:81: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget&#x27; and action=&#x27;editingWidget&#x27; and event=&#x27;End&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 3
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Widget action : editingWidget  event: End times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 6<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_EditApp[EditApp-Click-Widget]</td>
+          <td class="col-duration">31.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_Case_Hive.Test_System_Desktop.Test_Check_System_Desktop_Hive_Result object at 0x0000026D2031F940&gt;<br/>action = &#x27;EditApp&#x27;, event = &#x27;Click&#x27;, page = &#x27;Widget&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;action,event,page&#x27;,<br/>                             [(list(set.Widget[&quot;Widget&quot;][4].keys())[0], \<br/>                               list(set.Widget[&quot;Widget&quot;][4].values())[0], list(set.Widget.keys())[0])])<br/>    def test_EditApp(self, action, event, page):<br/>&gt;       Compare(action, event, page)<br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:429: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>action = &#x27;EditApp&#x27;, event = &#x27;Click&#x27;, page = &#x27;Widget&#x27;<br/><br/>    def Compare(action, event, page):<br/>        if int(total_hive_data(action,event,page)) == int(total_local_data(action,event,page)):<br/>            assert True<br/>    <br/>        else:<br/>&gt;           assert False<br/><span class="error">E           assert False</span><br/><br/>..\Test_Case_Hive\Test_System_Desktop.py:81: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget&#x27; and action=&#x27;EditApp&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 3
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Widget action : EditApp  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 5<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Collect_Buried_Log::test_collect_buired_result[1803011301990049]</td>
+          <td class="col-duration">12.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:89
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_collect_buired_result Line:97
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;logcat -v time |grep -iE &quot;.*wmTracker.*EventModel.*&quot; |grep -v &quot;clientSendMessage&quot; &gt; /update/buried_System_Desktop.log &amp;&quot;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startMap[2-startMap-Click-Default]</td>
+          <td class="col-duration">14.89</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 228
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startMap  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startMap
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMap Line:289
+=====&gt; Enter map app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMap Line:292
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startEnergy[2-startEnergy-Click-Default]</td>
+          <td class="col-duration">11.92</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startEnergy  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startEnergy
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startEnergy Line:306
+=====&gt; Enter Energy app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startEnergy Line:309
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startMusic[2-startMusic-Click-Default]</td>
+          <td class="col-duration">11.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startMusic  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startMusic
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMusic Line:322
+=====&gt; Enter Music app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMusic Line:325
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1496
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startBtPhone[2-startBtPhone-Click-Default]</td>
+          <td class="col-duration">12.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 230
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startBtPhone  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startBtPhone
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startBtPhone Line:338
+=====&gt; Enter BtPhone app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startBtPhone Line:341
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1496
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startDVR[2-startDVR-Click-Default]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startFM[2-startFM-Click-Default]</td>
+          <td class="col-duration">14.74</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 231
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startFM  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startFM
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startFM Line:370
+=====&gt; Enter FM app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startFM Line:373
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startSetting[2-startSetting-Click-Default]</td>
+          <td class="col-duration">11.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 231
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startSetting  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startSetting
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSetting Line:386
+=====&gt; Enter Settings app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSetting Line:389
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startWeChat[2-startWeChat-Click-Default]</td>
+          <td class="col-duration">13.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startWeChat  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startWeChat
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeChat Line:402
+=====&gt; Enter WeChat app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeChat Line:405
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1496
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startMiant[2-startVideo-Click-Default]</td>
+          <td class="col-duration">12.16</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 230
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startVideo  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startVideo
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startVideo Line:434
+=====&gt; Enter Video app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startVideo Line:437
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startCarControl[2-startCarControl-Click-Default]</td>
+          <td class="col-duration">14.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startCarControl  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startCarControl
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startCarControl Line:451
+=====&gt; Enter Car Control app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startCarControl Line:454
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1498
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startAQY[2-startAQY-Click-Default]</td>
+          <td class="col-duration">13.84</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 227
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startAQY  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startAQY
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAQY Line:467
+=====&gt; Enter AQY app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAQY Line:470
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startAVM[2-startAVM-Click-Default]</td>
+          <td class="col-duration">13.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startAVM  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startAVM
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAVM Line:483
+=====&gt; Enter AVM app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAVM Line:486
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1496
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startAudioBook[2-startAudioBook-Click-Default]</td>
+          <td class="col-duration">12.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startAudioBook  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startAudioBook
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAudioBook Line:499
+=====&gt; Enter Audio book app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startAudioBook Line:502
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1498
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startSkinStore[2-startSkinStore-Click-Default]</td>
+          <td class="col-duration">12.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 228
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startSkinStore  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startSkinStore
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSkinStore Line:516
+=====&gt; Enter skin store app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startSkinStore Line:519
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startMiJia[2-startMiJia-Click-Default]</td>
+          <td class="col-duration">13.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 228
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startMiJia  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startMiJia
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMiJia Line:532
+=====&gt; Enter mi jia app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startMiJia Line:535
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_startWeMeet[2-startWeMeet-Click-Default]</td>
+          <td class="col-duration">16.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test startWeMeet  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:startWeMeet
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeMeet Line:548
+=====&gt; Enter we meet app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:startWeMeet Line:551
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 1497
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Default::test_EnterWidgetPage[2-EnterWidgetPage-Click-Default]</td>
+          <td class="col-duration">18.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:106
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 230
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test EnterWidgetPage  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:EnterWidgetPage
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterWidgetPage Line:564
+=====&gt; Enter widget page app through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterWidgetPage Line:567
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Widget::test_EnterWidgetPage[2-EnterDefaultPage-Click-Widget]</td>
+          <td class="col-duration">15.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 228
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test EnterDefaultPage  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:EnterDefaultPage
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterDefaultPage Line:584
+=====&gt; Enter Default page  through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EnterDefaultPage Line:587
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Widget::test_showDefaultPage[2-showDefaultPage-Click-Widget]</td>
+          <td class="col-duration">10.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 229
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test showDefaultPage  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:showDefaultPage
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:showDefaultPage Line:598
+=====&gt; Show Default page  through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:showDefaultPage Line:601
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Widget::test_editingWidget_Start[2-editingWidget-Start-Widget]</td>
+          <td class="col-duration">19.68</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 228
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 87
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test editingWidget_Start  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:editingWidget
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_Start Line:613
+=====&gt; Show Default page  through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_Start Line:616
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 298
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Widget::test_editingWidget_End[2-editingWidget-End-Widget]</td>
+          <td class="col-duration">33.69</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 228
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test editingWidget_End  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:editingWidget
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_End Line:629
+=====&gt; Show Default page  through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:editingWidget_End Line:632
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 87
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 300
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Widget::test_EditApp[2-EditApp-Click-Widget]</td>
+          <td class="col-duration">35.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log setup------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:message Line:235
+=====&gt; start Test
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:76
+=====&gt; enter pay page
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 1803011301990049:7912
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 127.0.0.1:62839
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;GET /version HTTP/1.1&quot; 200 5
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 201
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 230
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:79
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:enter_system_desktop Line:82
+=====&gt; enter system desktop<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:Common Line:43
+=====&gt; start test EditApp  function,total count is 2
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:257
+=====&gt; check if Action:editingWidget
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EditApp Line:650
+=====&gt; Show Default page  through System Desktop UI 
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:EditApp Line:653
+=====&gt; {&#x27;currentPackageName&#x27;: &#x27;com.wm.launcher&#x27;, &#x27;displayHeight&#x27;: 1680, &#x27;displayRotation&#x27;: 3, &#x27;displaySizeDpX&#x27;: 1080, &#x27;displaySizeDpY&#x27;: 1920, &#x27;displayWidth&#x27;: 1080, &#x27;productName&#x27;: &#x27;ASE13230HD&#x27;, &#x27;screenOn&#x27;: True, &#x27;sdkInt&#x27;: 23, &#x27;naturalOrientation&#x27;: False}
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 299
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://127.0.0.1:62839 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Common\System_Desktop.py Function:warpper Line:269
+=====&gt; lvlog collect result value is : 0<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_Kill_Buried_Progress[1803011301990049]</td>
+          <td class="col-duration">7200.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Kill_Buried_Progress Line:288
+=====&gt; kill logcat collect log progress<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startEnergy[startEnergy-Click-Default]</td>
+          <td class="col-duration">40.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startEnergy&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startEnergy  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startMusic[startMusic-Click-Default]</td>
+          <td class="col-duration">29.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startMusic&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startMusic  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startBtPhone[startBtPhone-Click-Default]</td>
+          <td class="col-duration">33.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startBtPhone&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startBtPhone  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startDVR[startDVR-Click-Default]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startFM[startFM-Click-Default]</td>
+          <td class="col-duration">29.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startFM&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startFM  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startWeChat[startWeChat-Click-Default]</td>
+          <td class="col-duration">39.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startWeChat&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startWeChat  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startMiant[startVideo-Click-Default]</td>
+          <td class="col-duration">29.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startVideo&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startVideo  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startCarControl[startCarControl-Click-Default]</td>
+          <td class="col-duration">30.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startCarControl&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startCarControl  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startAQY[startAQY-Click-Default]</td>
+          <td class="col-duration">30.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startAQY&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startAQY  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startAVM[startAVM-Click-Default]</td>
+          <td class="col-duration">30.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startAVM&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startAVM  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startAudioBook[startAudioBook-Click-Default]</td>
+          <td class="col-duration">30.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startAudioBook&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startAudioBook  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startSkinStore[startSkinStore-Click-Default]</td>
+          <td class="col-duration">28.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startSkinStore&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startSkinStore  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startMiJia[startMiJia-Click-Default]</td>
+          <td class="col-duration">32.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startMiJia&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startMiJia  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_startWeMeet[startWeMeet-Click-Default]</td>
+          <td class="col-duration">32.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Default&#x27; and action=&#x27;startWeMeet&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Default action : startWeMeet  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Check_System_Desktop_Hive_Result::test_EnterWidgetPage[EnterDefaultPage-Click-Widget]</td>
+          <td class="col-duration">31.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:66
+=====&gt; start collect hive data
+DEBUG    root:logger.py:127 File:None Function:None Line:None
+=====&gt; select from_unixtime(cast(create_time/1000 as bigint)),*  from buried where pt_day=&#x27;2020-04-29&#x27; and vin_id=&#x27;LSJA0000000000081&#x27; and page_name=&#x27;Widget&#x27; and action=&#x27;EnterDefaultPage&#x27; and event=&#x27;Click&#x27; order by create_time
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_hive_data Line:73
+=====&gt; hive data is : 1
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:55
+=====&gt; start collect pagename : Widget action : EnterDefaultPage  event: Click times
+DEBUG    root:logger.py:127 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:total_local_data Line:60
+=====&gt; local data is : 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Test_Case_Hive/Test_System_Desktop.py::Test_Delete_Buried_Log::test_Delete_buired_log[1803011301990049]</td>
+          <td class="col-duration">13.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Delete_buired_log Line:437
+=====&gt; setting root partition read and write
+INFO     root:logger.py:99 File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_System_Desktop.py Function:test_Delete_buired_log Line:445
+=====&gt; execute cmd is :adb -s 1803011301990049 shell &quot;rm -rf /update/buried_System_Desktop.log&quot;<br/></div></td></tr></tbody></table></body></html>

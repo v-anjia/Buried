@@ -1,0 +1,22 @@
+Thu,23 Apr 2020 10:07:36 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:test_collect_buired_result Line:91
+=====> setting root partition read and write
+Thu,23 Apr 2020 10:08:18 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:test_collect_buired_result Line:99
+=====> execute cmd is :adb -s 1803011301990049 shell "logcat -v time |grep -iE ".*wmTracker.*EventModel.*" |grep -v "clientSendMessage" > /update/buried_Settings.log &"
+Thu,23 Apr 2020 10:08:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:108
+=====> start Test
+Thu,23 Apr 2020 10:08:23 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:111
+=====> enter setting ui 
+Thu,23 Apr 2020 10:08:23 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:kill_setting Line:399
+=====> kill setting progress
+Thu,23 Apr 2020 10:08:51 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:delete_tracker_log Line:273
+=====> delete tracker log successfully
+Thu,23 Apr 2020 10:08:51 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:message Line:121
+=====> delete tracker successfully
+Thu,23 Apr 2020 10:08:54 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:enter_settings_ui Line:385
+=====> enter setting ui
+Thu,23 Apr 2020 10:08:59 [INFO ] File:C:\Buried_Local_Hive\venv\Test_Case_Hive\Test_Settings_Buried_Point.py Function:Common Line:45
+=====> start test OpenApp  function,total count is 2
+Thu,23 Apr 2020 10:08:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:warpper Line:670
+=====> check if Action:Open_App
+Thu,23 Apr 2020 10:08:59 [INFO ] File:C:\Buried_Local_Hive\venv\Common\Setting.py Function:OpenApp Line:702
+=====> Enter settings page 
